@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import React, { useState } from 'react';
 import Header from './Components/Header.jsx';
+import Footer from './Components/Footer.jsx';
 import './App.css';
 import AboutMe from './Components/AboutMe.jsx';
 
@@ -11,7 +12,7 @@ function App() {
     <div className="App">
       <Header />
       <AboutMe />
-      
+      <Footer />
     </div>
   );
 }

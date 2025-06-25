@@ -1,0 +1,45 @@
+/* --- Footer Styling --- */
+.footer {
+    background-color: #D32F2F; /* A dark, modern grey */
+    color: #ffffff; /* A soft, light grey for the text */
+    padding: 1.5rem 1rem; /* Vertical and horizontal padding */
+    text-align: left;
+    font-family: 'Nunito Sans', sans-serif; /* Use fonts from your project */
+    font-size: 14px;
+    width: 100%;
+}
+
+.footerContainer {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+.copyrightText {
+    margin: 0; /* Remove default paragraph margin */
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Optional: Add styling for any links you might add later */
+.copyrightText a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.copyrightText a:hover {
+    color: #c5a47e; /* Using the gold color from the header for consistency */
+}
+
+
+/* --- Responsive Design --- */
+/* For very small mobile screens */
+@media (max-width: 576px) {
+    .copyrightText {
+        font-size: 0.8rem; /* Make text slightly smaller on mobile */
+    }
+    
+    .footer {
+        padding: 1rem;
+    }
+}
