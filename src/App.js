@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <div className="header-spacer"></div> 
       <AboutMe />
       <Footer />
     </div>

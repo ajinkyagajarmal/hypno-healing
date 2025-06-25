@@ -2,11 +2,12 @@ body, html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .App {
   text-align: center;
+  overflow-x: hidden;
 }
 
 .App-logo {
