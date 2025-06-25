@@ -1,15 +1,14 @@
 /* --- Root Variables for Colors --- */
 :root {
     --primary-font: var('Nunito Sans', sans-serif);
-    /* --color-bg-top: #e64d4a; */
     --color-bg-top: #D32F2F; /* Light background for top bar */
-    /* --color-gold: #c5a47e; */
     --color-gold: #D32F2F;
     --color-text-dark: #333;
     --color-text-light: #ffffff;
     --color-white: #ffffff;
 }
 
+/* ... All of your desktop styles from .header to .hamburger remain exactly the same ... */
 .header {
     width: 100%;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -22,20 +21,18 @@
     font-size: 18px;
     max-width: 1200px;
     margin: 0 auto;
-    /* padding: 0 1rem; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
 }
 
-/* --- Top Bar Styling --- */
 .topBar {
     background-color: var(--color-bg-top);
     padding: 15px 0;
     font-size: 0.8rem;
     color: var(--color-text-light);
-    transition: display 0.3s ease; /* Smooth transition if needed */
+    transition: display 0.3s ease;
 }
 
 .topBar .container {
@@ -66,7 +63,6 @@
     color: var(--color-gold);
 }
 
-/* --- Main Navigation Styling --- */
 .mainNav {
     padding: 1rem 0;
 }
@@ -102,9 +98,7 @@
     color: var(--color-gold);
 }
 
-.navLinks a.active {
-    /* color: var(--color-gold); */
-}
+.navLinks a.active {}
 
 .navLinks a.active::before {
     content: '';
@@ -118,51 +112,6 @@
     border-radius: 2px;
 }
 
-.chevron {
-    font-size: 0.7rem;
-    margin-top: 2px;
-}
-
-/* --- Dropdown Menu --- */
-.dropdown {
-    position: relative;
-}
-
-.dropdownMenu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--color-white);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 0.5rem 0;
-    list-style: none;
-    min-width: 180px;
-    z-index: 1000;
-}
-
-.dropdown:hover .dropdownMenu {
-    display: block;
-}
-
-.dropdownMenu li a {
-    padding: 0.75rem 1.5rem;
-    display: block;
-    white-space: nowrap;
-    width: 100%;
-    color: var(--color-text-dark);
-}
-
-.dropdownMenu li a::before {
-    display: none;
-}
-
-.dropdownMenu li a:hover {
-    background-color: var(--color-bg-top);
-}
-
-/* --- Hamburger & Mobile Extras (Hidden on Desktop by default) --- */
 .hamburger {
     display: none;
     font-size: 2rem;
@@ -177,10 +126,9 @@
     display: none;
 }
 
-/* --- Responsive Design --- */
 
+/* --- Responsive Design --- */
 @media (max-width: 992px) {
-    /* Hide the top bar on mobile */
     .topBar {
         display: none;
     }
@@ -189,12 +137,13 @@
         display: block;
     }
 
+    /* Keep the slide-in menu panel as you have it */
     .navLinks {
-        position: fixed; /* Use fixed for full viewport height */
+        position: fixed;
         top: 0;
         left: -100%;
         width: 80%;
-        max-width: 300px;
+        max-width: 320px;
         height: 100vh;
         background-color: var(--color-white);
         flex-direction: column;
@@ -204,7 +153,7 @@
         box-shadow: 2px 0 10px rgba(0,0,0,0.1);
         transition: left 0.3s ease-in-out;
         z-index: 1000;
-        overflow-y: auto; /* Allow scrolling if content is long */
+        overflow-y: auto;
     }
 
     .navLinks.navActive {
@@ -225,7 +174,6 @@
     .navLinks a {
         padding: 1rem 1.5rem;
         width: 100%;
-        justify-content: space-between;
     }
 
     .navLinks a.active::before {
@@ -233,65 +181,55 @@
     }
 
     .navLinks a.active {
-        background-color: var(--color-bg-top);
+        background-color: var(--color-bg-top); /* This gives the red background */
+        color: var(--color-text-light); /* Makes text white on red background */
     }
 
     .logo img {
         max-height: 64px;
     }
-
-    .dropdown:hover .dropdownMenu {
-        display: none;
-    }
-
-    .dropdownMenu {
-        position: static;
-        display: block;
-        box-shadow: none;
-        padding-left: 1.5rem;
-        background-color: transparent;
-        border-radius: 0;
-        min-width: auto;
-    }
-
-    .dropdownMenu li a {
-        padding: 0.75rem 1.5rem;
-        font-size: 0.9rem;
-    }
     
-    /* --- NEW: STYLES FOR MOBILE-ONLY CONTENT --- */
+    /* --- UPDATED STYLES FOR MOBILE INFO SECTION --- */
     .mobileExtras {
         display: block;
-        padding: 2rem 1.5rem 1rem;
-        margin-top: 2rem;
-        border-top: 1px solid #eee;
+        padding: 2rem 1.5rem; /* Consistent padding */
+        margin-top: 1rem; /* Space between nav links and this section */
+        border-top: 1px solid #eee; /* The line separator */
         width: 100%;
     }
 
-    .mobileContact {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    
-    .mobileContact a {
-        color: var(--color-text-light);
-        font-size: 0.9rem;
-        padding: 0; /* Override navLinks padding */
-    }
-
+    /* 1. Style the Social Icons */
     .mobileSocial {
         display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 2rem;
-        font-size: 1.2rem;
+        justify-content: flex-start; /* Align to the left */
+        gap: 1.5rem; /* Space between icons */
+        margin-bottom: 2rem; /* Space below icons, before contact info */
+        font-size: 1.5rem;
     }
 
     .mobileSocial a {
-        color: var(--color-text-dark);
-        padding: 0; /* Override navLinks padding */
+        color: var(--color-text-dark); /* Black icons */
+        padding: 0;
     }
+
+    /* 2. Style the Contact Info */
+    .mobileContact {
+        display: flex;
+        flex-direction: column; /* Stack phone and email vertically */
+        gap: 1rem; /* Space between phone and email */
+        align-items: flex-start; /* Align them to the left */
+    }
+    
+    .mobileContact a {
+        color: var(--color-text-dark); /* << CHANGED: Make text visible on white background */
+        font-size: 0.9rem;
+        padding: 0;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    /* --- END OF UPDATES --- */
 }
 
 @media (max-width: 576px) {
