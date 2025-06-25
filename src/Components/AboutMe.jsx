@@ -20,7 +20,7 @@ const AboutMe = () => {
             these ancient practices with modern techniques and technologies.
           </p>
           <button className={styles.knowMoreButton}>
-            Know more
+            Know mores
           </button>
         </div>
 
