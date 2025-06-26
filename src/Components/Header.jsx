@@ -127,7 +127,7 @@ import whatsapp from '../Assets/white-whatsapp.png'
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhoneAlt, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 
 // IMPORTANT: Update this path to your logo image
-import logoImage from '../Assets/samplelogo.png'; 
+import logoImage from '../Assets/hypnologo.png'; 
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);

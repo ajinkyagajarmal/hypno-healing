@@ -1,0 +1,115 @@
+/* --- Outer Section --- */
+.contactSection {
+    /* Provides space above/below the component. Background should be your page's background. */
+    padding: 4rem 0; 
+    font-family: 'Roboto', 'Nunito Sans', sans-serif;
+}
+
+/* --- Main Container for the Vertical Cards --- */
+.cardContainer {
+    /* THIS IS THE KEY TO CENTERING THE COMPONENT */
+    max-width: 1200px; /* Prevents it from stretching full-width */
+    margin: 0 auto;   /* Centers the block horizontally */
+
+    /* This padding prevents content from touching edges on small screens */
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+
+    /* These styles create the container look from the image */
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    line-height: 1.6;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures the border-radius is applied to the child cards */
+}
+
+/* --- Individual Info Cards --- */
+.infoCard {
+    background-color: #D32F2F; /* Brighter blue */
+    padding: 1.5rem;
+}
+
+.middleCard {
+    background-color: #ffffff; /* Muted, steel blue */
+}
+
+/* Add a bottom border to all cards except the last one */
+.infoCard:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* --- Typography and Content --- */
+.cardTitle {
+    font-size: 1.25rem;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.cardText {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.contactLabel {
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
+
+.contactLink {
+    color: #333;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.contactLink:hover {
+    text-decoration: underline;
+}
+
+/* --- Social Icons Styling --- */
+.socialIcons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    justify-content: center; /* Centers the icons horizontally */
+}
+
+.iconLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px dotted #ffffff;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.iconLink:hover {
+    background-color: #ffffff;
+    color: #1976D2;
+}
+
+/* --- Responsive Design for mobile padding --- */
+@media (max-width: 768px) {
+    .contactSection {
+        padding: 3rem 0;
+    }
+    
+    .cardContainer {
+        /* On smaller screens, the side padding becomes more important */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0 1rem; /* Ensures a small margin from the very edge */
+    }
+
+    .infoCard {
+        padding: 2rem 1.5rem;
+    }
+}
