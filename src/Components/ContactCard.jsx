@@ -72,7 +72,7 @@ const ContactCard = () => {
         
         {/* Card 1: Location */}
         <div className={styles.infoCard}>
-          <h3 className={styles.cardTitle}>Location:</h3>
+          <h3 className={styles.cardTitle1}>Location:</h3>
           <p className={styles.cardText}>
             862, Saraswati Vihar, M.G.Road, Gurugram - 122002, Haryana, India.
           </p>
@@ -93,7 +93,7 @@ const ContactCard = () => {
 
         {/* Card 3: Follow Us */}
         <div className={styles.infoCard}>
-          <h3 className={styles.cardTitle}>Follow Us On:</h3>
+          <h3 className={styles.cardTitle1}>Follow Us On:</h3>
           <div className={styles.socialIcons}>
             <a href="https://facebook.com" className={styles.iconLink} aria-label="Facebook">
               <FaFacebookF />
