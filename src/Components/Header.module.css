@@ -1,6 +1,6 @@
 /* --- Root Variables for Colors --- */
 :root {
-    --primary-font: var('Nunito Sans', sans-serif);
+    --primary-font: var('Raleway', sans-serif);
     --color-bg-top: #D32F2F; /* Light background for top bar */
     --color-gold: #D32F2F;
     --color-text-dark: #333;
@@ -20,8 +20,9 @@
 }
 
 .container {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
@@ -53,7 +54,7 @@
 .socialIcons a, .contactInfo a {
     font-size: 14px;
     font-weight: 300;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: var(--color-text-light);
     text-decoration: none;
     display: flex;
@@ -204,9 +205,9 @@
     /* 1. Style the Social Icons */
     .mobileSocial {
         display: flex;
-        justify-content: flex-start; /* Align to the left */
+        justify-content: left; /* Align to the left */
         gap: 1.5rem; /* Space between icons */
-        margin-bottom: 2rem; /* Space below icons, before contact info */
+        margin-bottom: 1.4rem; /* Space below icons, before contact info */
         font-size: 1.5rem;
     }
 

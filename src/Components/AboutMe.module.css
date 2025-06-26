@@ -45,7 +45,7 @@
 .heading {
     margin-top: 0;
     margin-bottom: 14px;
-    font-family: 'Lora', serif; /* Serif font for the heading */
+    font-family: 'Raleway', serif; /* Serif font for the heading */
     font-size: 3rem;
     font-weight: 600;
     color: #333;
@@ -58,7 +58,7 @@
     line-height: 1.7;
     margin-bottom: 2rem;
     color: #555;
-    font-family: 'Nunito Sans', sans-serif; /* Sans-serif font for the description */
+    font-family: 'Raleway', sans-serif; /* Sans-serif font for the description */
 }
 
 .knowMoreButton {
@@ -68,7 +68,7 @@
     padding: 12px 30px;
     font-size: 1rem;
     font-weight: 500;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     cursor: pointer;
     border-radius: 2px;
     transition: background-color 0.3s ease, transform 0.2s ease;

@@ -2,7 +2,7 @@
 .contactSection {
     /* Provides space above/below the component. Background should be your page's background. */
     padding: 4rem 0; 
-    font-family: 'Roboto', 'Nunito Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 /* --- Main Container for the Vertical Cards --- */
@@ -42,7 +42,7 @@
 /* --- Typography and Content --- */
 .cardTitle {
     font-size: 1.25rem;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     color: #333;
     margin-top: 0;
@@ -50,7 +50,7 @@
 }
 .cardTitle1 {
     font-size: 1.25rem;
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-weight: 600;
     color: #ffffff;
     margin-top: 0;
