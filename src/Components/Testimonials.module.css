@@ -1,0 +1,161 @@
+/* ------------------------------------------------------------------ */
+/*               EASY CUSTOMIZATION AREA (EDIT THESE)                 */
+/* ------------------------------------------------------------------ */
+:root {
+    --font-serif: 'Raleway', serif; /* Font for the main title */
+    --font-sans-serif: 'Raleway', sans-serif; /* Font for body text */
+
+    --color-text-dark: #333333;
+    --color-text-light: #ffffff;
+    --color-text-subtle: #555555;
+    
+    /* Background colors for the cards */
+    --color-bg-light: #f8f3eb; /* The light beige from the image */
+    --color-bg-accent: #D32F2F; /* The mustard/gold from the image */
+
+    /* Arrow color */
+    --color-arrow: #888888;
+    --color-arrow-hover: #333333;
+}
+/* ------------------------------------------------------------------ */
+/*                        END OF CUSTOMIZATION AREA                   */
+/* ------------------------------------------------------------------ */
+
+
+.testimonialsSection {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    font-family: var(--font-sans-serif);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mainTitle {
+    font-family: var(--font-serif);
+    font-size: 3rem;
+    color: var(--color-text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-subtle);
+    margin-bottom: 3rem;
+}
+
+.sliderContainer {
+    position: relative;
+    padding: 0 40px; /* Add padding to make space for the arrows */
+}
+
+.testimonialCard {
+    padding: 2rem;
+    border-radius: 8px;
+    height: 100%; /* Important for Swiper to align cards */
+    text-align: left;
+    position: relative;
+
+    /* These flex properties ensure the author is at the bottom */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lightCard {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+}
+
+.accentCard {
+    background-color: var(--color-bg-accent);
+    color: var(--color-text-light);
+}
+
+.testimonialText {
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1; /* Allows this element to take up available space */
+}
+
+.authorSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.authorImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.accentCard .authorImage {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.authorInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.authorName {
+    font-weight: 700;
+}
+
+.authorTitle {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.quoteIcon {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    opacity: 0.1;
+}
+
+/* --- Custom Swiper Arrow Styling --- */
+/* We need to use :global because Swiper adds these classes outside the module scope */
+:global(.mySwiper .swiper-button-next),
+:global(.mySwiper .swiper-button-prev) {
+    color: var(--color-arrow);
+    transition: color 0.3s ease;
+}
+
+:global(.mySwiper .swiper-button-next:hover),
+:global(.mySwiper .swiper-button-prev:hover) {
+    color: var(--color-arrow-hover);
+}
+
+/* Making the arrow icons smaller */
+:global(.mySwiper .swiper-button-next::after),
+:global(.mySwiper .swiper-button-prev::after) {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .testimonialsSection {
+        padding: 3rem 1rem;
+    }
+    .sliderContainer {
+        padding: 0 10px; /* Less padding for arrows on smaller screens */
+    }
+    :global(.mySwiper .swiper-button-next),
+    :global(.mySwiper .swiper-button-prev) {
+        /* Hides arrows on the smallest screens if desired, or just makes them smaller */
+        /* display: none; */ 
+    }
+    .mainTitle {
+        font-size: 2.2rem;
+    }
+}

@@ -8,7 +8,7 @@
 /* --- Main Container for the Vertical Cards --- */
 .cardContainer {
     /* THIS IS THE KEY TO CENTERING THE COMPONENT */
-    max-width: 1200px; /* Prevents it from stretching full-width */
+    max-width: 960px; /* Prevents it from stretching full-width */
     margin: 0 auto;   /* Centers the block horizontally */
 
     /* This padding prevents content from touching edges on small screens */
@@ -31,7 +31,7 @@
 }
 
 .middleCard {
-    background-color: #ffffff; /* Muted, steel blue */
+    background-color: #FFFAFA; /* Muted, steel blue */
 }
 
 /* Add a bottom border to all cards except the last one */
@@ -58,12 +58,18 @@
 }
 
 .cardText {
+    color: #ffffff;
     margin: 0.5rem 0;
     font-size: 1rem;
     font-weight: 300;
 }
 
 .contactLabel {
+    margin-right: 0.5rem;
+    font-weight: 600;
+}
+.contactLabel1 {
+    color: #333333;
     margin-right: 0.5rem;
     font-weight: 600;
 }
@@ -112,8 +118,8 @@
     
     .cardContainer {
         /* On smaller screens, the side padding becomes more important */
-        padding-left: 1rem;
-        padding-right: 1rem;
+        /* padding-left: 1rem;
+        padding-right: 1rem; */
         margin: 0 1rem; /* Ensures a small margin from the very edge */
     }
 

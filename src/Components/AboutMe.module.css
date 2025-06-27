@@ -2,7 +2,6 @@
 .aboutSection {
     font-family: 'Roboto', sans-serif;
     padding: 4rem 2rem; /* Vertical and horizontal padding */
-    background-color: #ffffff;
     color: #333;
 }
 
@@ -76,7 +75,7 @@
 }
 
 .knowMoreButton:hover {
-    background-color: #ed1814; /* A slightly darker shade for hover */
+    background-color: #333333; /* A slightly darker shade for hover */
     transform: translateY(-2px);
 }
 

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Header from './Components/Header.jsx';
 import ContactMap from './Components/ContactMap.jsx';
 import ContactCard from './Components/ContactCard.jsx';
+import Testimonials from './Components/Testimonials.jsx';
 import Footer from './Components/Footer.jsx';
 import './App.css';
 import AboutMe from './Components/AboutMe.jsx';
@@ -17,6 +18,7 @@ function App() {
       
         <main>
         <AboutMe />
+        <Testimonials />
         <ContactMap />
         <ContactCard />
         </main>
