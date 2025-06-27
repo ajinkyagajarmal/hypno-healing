@@ -10,7 +10,7 @@ const ContactMap = () => {
     <section id="contact" className={styles.contactSection}>
       <div className={styles.container}>
         <h2 className={styles.title}>Contact</h2>
-        
+        <p className={styles.subtitle}>For In-person or Online Appointments.</p>
         <div className={styles.mapContainer}>
           <iframe
             src={mapSrc}
