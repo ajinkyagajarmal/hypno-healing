@@ -53,7 +53,7 @@
 //                 <div className={styles.container}>
 //                     <div className={styles.logo}>
 //                         <a href="/" onClick={() => handleLinkClick('Home')}>
-//                             <img src={logoImage} alt="Shweta Ranjan Logo" />
+//                             <img src={logoImage} alt="Neha Patel Logo" />
 //                         </a>
 //                     </div>
 
@@ -161,7 +161,7 @@ const Header = () => {
                 {/* ... This section remains unchanged ... */}
                 <div className={styles.container}>
                     <div className={styles.logo}>
-                        <a href="/" onClick={() => handleLinkClick('Home')}><img src={logoImage} alt="Shweta Ranjan Logo" /></a>
+                        <a href="/" onClick={() => handleLinkClick('Home')}><img src={logoImage} alt="Neha Patel Logo" /></a>
                     </div>
                     <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
                         {menuOpen ? <FaTimes /> : <FaBars />}

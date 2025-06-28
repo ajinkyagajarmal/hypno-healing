@@ -36,7 +36,8 @@
 /* For very small mobile screens */
 @media (max-width: 576px) {
     .copyrightText {
-        font-size: 0.8rem; /* Make text slightly smaller on mobile */
+        font-size: 0.8rem; 
+        text-align: center; /* Center text on small screens */
     }
     
     .footer {

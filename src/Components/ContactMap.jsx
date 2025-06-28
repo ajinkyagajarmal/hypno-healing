@@ -18,7 +18,7 @@ const ContactMap = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Google Map of Shweta Ranjan's location"
+            title="Google Map of Neha Patel's location"
           ></iframe>
         </div>
       </div>

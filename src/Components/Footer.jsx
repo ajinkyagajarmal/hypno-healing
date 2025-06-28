@@ -10,7 +10,7 @@ const Footer = () => {
         
       <div className={styles.footerContainer}>
         <p className={styles.copyrightText}>
-          Copyright © {currentYear} | Shweta Ranjan. All Rights Reserved.
+          Copyright © {currentYear} | Neha Patel. All Rights Reserved.
         </p>
       </div>
                          

@@ -28,14 +28,14 @@ import { FaQuoteRight } from 'react-icons/fa';
 const testimonialsData = [
   {
     id: 1,
-    text: "Since I have been in touch with Shweta di..she has become the guiding light in my life...I never take any major decisions without consulting her, if I'm stuck with some problem I know where will I find the solution..so trust me she is the best...my best wishes with you always. Keep guiding us.",
+    text: "Since I have been in touch with Neha di..she has become the guiding light in my life...I never take any major decisions without consulting her, if I'm stuck with some problem I know where will I find the solution..so trust me she is the best...my best wishes with you always. Keep guiding us.",
     name: "Divya Kukreti",
     title: "Corporate Professional",
     // image: avatar1,
   },
   {
     id: 2,
-    text: "I always love the sessions with Ms.Shweta , beside being a amazing healer and reader, she is also a lovely person. After every session I have had with her so far i have always felt energised and empowered. Thank you so much Shweta!! 💕",
+    text: "I always love the sessions with Ms.Neha , beside being a amazing healer and reader, she is also a lovely person. After every session I have had with her so far i have always felt energised and empowered. Thank you so much Neha!! 💕",
     name: "Subzar Moza",
     title: "Homemaker",
     // image: avatar2,
@@ -56,7 +56,7 @@ const testimonialsData = [
   },
   {
     id: 5,
-    text: "Shweta has a remarkable gift. Her insights have helped me navigate some of the most challenging periods of my life with confidence and grace. The energy she exudes is incredibly positive and uplifting.",
+    text: "Neha has a remarkable gift. Her insights have helped me navigate some of the most challenging periods of my life with confidence and grace. The energy she exudes is incredibly positive and uplifting.",
     name: "Rina Sharma",
     title: "Yoga Instructor",
     // image: avatar5,

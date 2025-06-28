@@ -24,7 +24,7 @@
 //           </p>
 //           <p className={styles.cardText}>
 //             <span className={styles.contactLabel}>E:</span>
-//             <a href="mailto:connect@shwetaranjan.com" className={styles.contactLink}>connect@shwetaranjan.com</a>
+//             <a href="mailto:connect@nehapatel.com" className={styles.contactLink}>connect@nehapatel.com</a>
 //           </p>
 //         </div>
 
@@ -87,7 +87,7 @@ const ContactCard = () => {
           </p>
           <p className={styles.cardText}>
             <span className={styles.contactLabel1}>Email:</span>
-            <a href="mailto:connect@shwetaranjan.com" className={styles.contactLink}>connect@shwetaranjan.com</a>
+            <a href="mailto:connect@nehapatel.com" className={styles.contactLink}>connect@nehapatel.com</a>
           </p>
         </div>
 
