@@ -1,11 +1,11 @@
 /* --- Footer Styling --- */
 .footer {
-    background-color: #D32F2F; /* A dark, modern grey */
+    background-color: #333333; /* A dark, modern grey */
     color: #ffffff; /* A soft, light grey for the text */
     padding: 1.5rem 1rem; /* Vertical and horizontal padding */
     text-align: left;
     font-family: 'Raleway', sans-serif; /* Use fonts from your project */
-    font-size: 14px;
+    font-size: 16px;
     width: auto;
 }
 
@@ -16,7 +16,7 @@
 
 .copyrightText {
     margin: 0; /* Remove default paragraph margin */
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 400;
 }
 

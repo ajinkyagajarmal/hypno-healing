@@ -3,10 +3,30 @@
     font-family: 'Roboto', sans-serif;
     padding: 4rem 2rem; /* Vertical and horizontal padding */
     color: #333;
+    /* background-image: url('../Assets/4853433.jpg'); /* Adjust path as needed */
+    /* background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;  */
+}
+
+
+/* Optional: Add an overlay for better text contrast */
+.aboutSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.802); */
+    z-index: 0;
 }
 
 /* Main flex container */
 .container {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
     display: flex;
     align-items: flex-start; /* Vertically align content */
     justify-content:center;
@@ -61,7 +81,7 @@
 }
 
 .knowMoreButton {
-    background-color: #d02d2b; /* Mustard yellow from the image */
+    background-color: #D32F2F; /* Mustard yellow from the image */
     color: #ffffff;
     border: none;
     padding: 12px 30px;
