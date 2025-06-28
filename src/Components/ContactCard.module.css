@@ -26,12 +26,12 @@
 
 /* --- Individual Info Cards --- */
 .infoCard {
-    background-color: #D32F2F;
+    background-color: #c72030;
     padding: 1.5rem;
 }
 
 .middleCard {
-    background-color: #F8FEEB; 
+    background-color: #FFFAF8; 
 }
 
 /* Add a bottom border to all cards except the last one */

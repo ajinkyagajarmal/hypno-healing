@@ -1,7 +1,7 @@
 /* --- Root Variables for Colors --- */
 :root {
     --primary-font: var('Raleway', sans-serif);
-    --color-bg-top: #D32F2F; /* Light background for top bar */
+    --color-bg-top: #c72030; /* Light background for top bar */
     --color-gold: #D32F2F;
     --color-text-dark: #333;
     --color-text-light: #ffffff;
