@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactCard from './ContactCard';
 import styles from './ContactMap.module.css';
 
 const ContactMap = () => {
@@ -20,8 +21,9 @@ const ContactMap = () => {
             referrerPolicy="no-referrer-when-downgrade"
             title="Google Map of Neha Patel's location"
           ></iframe>
-        </div>
+        </div> 
       </div>
+      <ContactCard />
     </section>
   );
 };
