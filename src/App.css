@@ -5,6 +5,9 @@ body, html {
   font-family: "Raleway", sans-serif;
   /* overflow-x: hidden; */
 }
+.header-spacer {
+  height: 145px; /* Adjust this value! See note below. */
+}
 
 .App {
   text-align: center;
@@ -43,5 +46,11 @@ body, html {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .header-spacer {
+    height: 100px;
   }
 }
