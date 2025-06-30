@@ -117,13 +117,49 @@
 }
 
 .hamburger {
-    display: none;
+    /* display: none;
     font-size: 2rem;
     background: none;
     border: none;
     color: var(--color-text-dark);
     cursor: pointer;
-    z-index: 1001;
+    z-index: 1001; */
+    padding: 15px; /* Increase tappable area */
+  display: inline-block;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 1000; /* Ensure it's above other nav elements if needed */
+  transition: transform 0.3s ease; /* Optional: slight scale effect on tap */
+}
+
+.hamburger {
+  -webkit-tap-highlight-color: transparent; /* For webkit browsers (Chrome, Safari) */
+  -tap-highlight-color: transparent; /* Standard property */
+}
+
+.hamburgerLine {
+  display: block;
+  width: 30px; /* Width of the hamburger lines */
+  height: 3px;  /* Thickness of the lines */
+  background-color: #333; /* Color of the lines, adjust as needed */
+  margin: 6px 0; /* Spacing between the lines */
+  border-radius: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburgerActive .hamburgerLine:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+/* Fade out the middle line completely */
+.hamburgerActive .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate the bottom line up */
+.hamburgerActive .hamburgerLine:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .mobileExtras {
@@ -158,6 +194,7 @@
         transition: left 0.3s ease-in-out;
         z-index: 1000;
         overflow-y: auto;
+        transition: left 0.5s ease;
     }
 
     .navLinks.navActive {

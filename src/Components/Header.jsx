@@ -163,9 +163,19 @@ const Header = () => {
                     <div className={styles.logo}>
                         <a href="/" onClick={() => handleLinkClick('Home')}><img src={logoImage} alt="Neha Patel Logo" /></a>
                     </div>
-                    <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
+                    {/* <button className={styles.hamburger} onClick={() => setMenuOpen(!menuOpen)} aria-label="Toggle menu">
                         {menuOpen ? <FaTimes /> : <FaBars />}
-                    </button>
+                    </button> */}
+
+                    <button
+    className={`${styles.hamburger} ${menuOpen ? styles.hamburgerActive : ''}`}
+    onClick={() => setMenuOpen(!menuOpen)}
+    aria-label="Toggle menu"
+>
+    <span className={styles.hamburgerLine}></span>
+    <span className={styles.hamburgerLine}></span>
+    <span className={styles.hamburgerLine}></span>
+</button>
                     <nav className={`${styles.navLinks} ${menuOpen ? styles.navActive : ''}`}>
                         <ul>
                             {/* ... Navigation links remain unchanged ... */}
