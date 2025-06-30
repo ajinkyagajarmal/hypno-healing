@@ -125,7 +125,7 @@
     cursor: pointer;
     z-index: 1001; */
     padding: 15px; /* Increase tappable area */
-  display: inline-block;
+  display: none;
   cursor: pointer;
   background-color: transparent;
   border: none;
@@ -278,3 +278,4 @@
         max-height: 56px;
     }
 }
+
