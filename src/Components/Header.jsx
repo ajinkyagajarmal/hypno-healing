@@ -171,9 +171,9 @@ const Header = () => {
                             {/* ... Navigation links remain unchanged ... */}
                             <li><a href="#home" className={activeLink === 'Home' ? styles.active : ''} onClick={() => handleLinkClick('Home')}>Home</a></li>
                             <li><a href="#services" className={activeLink === 'Services' ? styles.active : ''} onClick={() => setActiveLink('Services')}>Services</a></li>
-                            <li><a href="#videos" className={activeLink === 'Videos' ? styles.active : ''} onClick={() => handleLinkClick('Videos')}>Videos</a></li>
+                            <li><a href="#gallery" className={activeLink === 'Gallery' ? styles.active : ''} onClick={() => handleLinkClick('Gallery')}>Gallery</a></li>
                             <li><a href="#testimonials" className={activeLink === 'testimonials' ? styles.active : ''} onClick={() => handleLinkClick('Testimonials')}>Testimonials</a></li>
-                            <li><a href="#blog" className={activeLink === 'Blog' ? styles.active : ''} onClick={() => handleLinkClick('Blog')}>Blog</a></li>
+                            {/* <li><a href="#blog" className={activeLink === 'Blog' ? styles.active : ''} onClick={() => handleLinkClick('Blog')}>Blog</a></li> */}
                             <li><a href="#contact" className={activeLink === 'Contact' ? styles.active : ''} onClick={() => handleLinkClick('Contact')}>Contact</a></li>
                         </ul>
                         
