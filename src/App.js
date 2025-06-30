@@ -4,6 +4,7 @@ import Header from './Components/Header.jsx';
 import ContactMap from './Components/ContactMap.jsx';
 import Testimonials from './Components/Testimonials.jsx';
 import WhatsAppChatWidget from './Components/WhatsAppChatWidget.jsx';
+import AnimatedSection from './Components/AnimatedSection.jsx';
 import Footer from './Components/Footer.jsx';
 import './App.css';
 import AboutMe from './Components/AboutMe.jsx';
@@ -17,9 +18,17 @@ function App() {
       <div className="header-spacer"></div> 
       
         <main>
-        <AboutMe />
-        <Testimonials />
-        <ContactMap />
+        <AnimatedSection>
+          <AboutMe />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <Testimonials />
+        </AnimatedSection>
+        
+        <AnimatedSection>
+          <ContactMap />
+        </AnimatedSection>
         </main>
       <Footer />
       <WhatsAppChatWidget 

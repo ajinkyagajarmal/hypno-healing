@@ -3,11 +3,6 @@
     font-family: 'Roboto', sans-serif;
     padding: 4rem 2rem; /* Vertical and horizontal padding */
     color: #333;
-    background-image: url('../Assets/4853433.jpg'); /* Adjust path as needed */
-     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; 
 }
 
 
