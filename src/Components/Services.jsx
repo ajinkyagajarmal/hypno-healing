@@ -54,7 +54,7 @@ const ServiceItem = ({ service, isReversed }) => {
   const handleBookAppointment = () => {
     const cleanPhoneNumber = phoneNumber.replace(/[^0-9]/g, '');
     const message = `Hello! I would like to book an appointment for the "${title}" service.`;
-    const whatsappUrl = `https://wa.me/${cleanPhoneNumber}`;
+    const whatsappUrl = `https://wa.me/${cleanPhoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -71,7 +71,7 @@ const ServiceItem = ({ service, isReversed }) => {
         <p className={styles.serviceDescription}>{description}</p>
         <button onClick={handleBookAppointment} className={styles.bookButton}>
           <span>BOOK APPOINTMENT</span>
-          <span style={{ fontSize: '1.2rem' }}>→</span>
+          {/* <span style={{ fontSize: '1.2rem' }}>→</span> */}
         </button>
       </div>
       <div className={styles.serviceImageWrapper}>

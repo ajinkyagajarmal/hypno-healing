@@ -46,6 +46,8 @@
 .serviceContent {
   flex: 1;
   max-width: 50%;
+  position: relative;
+  z-index: 2;
 }
 
 .serviceNumber {
@@ -83,18 +85,20 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: var(--color-gold-services);
+  color: #fff;
   font-weight: 700;
   text-decoration: none;
   cursor: pointer;
-  background: none;
+  background: var(--color-gold-services);
   border: none;
-  padding: 0;
+  border-radius: 2px;
+  padding: 10px 20px;
   font-size: 0.9rem;
   transition: transform 0.3s ease;
 }
 
 .bookButton:hover {
+  background-color: #333333;
   transform: translateX(5px);
 }
         
@@ -140,5 +144,9 @@
   }
   .serviceTitle {
     font-size: 1.6rem;
+  }
+  .serviceDescription {
+    font-size: 16px;
+    text-align: left;
   }
 }

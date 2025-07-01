@@ -19,21 +19,27 @@ function App() {
       <div className="header-spacer"></div> 
       
         <main>
+          <section id="home">
         <AnimatedSection>
           <AboutMe />
         </AnimatedSection>
+        </section>
 
+        <section id="services">
         <AnimatedSection>
           <Services />
         </AnimatedSection>
-        
+        </section>
+        <section id="testimonials">
         <AnimatedSection>
           <Testimonials />
         </AnimatedSection>
-        
+        </section>
+        <section id="contact">
         <AnimatedSection>
           <ContactMap />
         </AnimatedSection>
+        </section>
         </main>
       <Footer />
       <WhatsAppChatWidget 
