@@ -1,0 +1,144 @@
+/* src/Components/Services.module.css */
+
+/* --- CUSTOMIZE YOUR FONTS AND COLORS HERE --- */
+:root {
+  --font-heading-services: 'Raleway', serif;
+  --font-body-services: 'Raleway', serif;
+  --color-gold-services: #D32F2F;
+  --color-text-dark-services: #333333;
+  --color-text-light-services: #555555;
+}
+/* ------------------------------------------- */
+
+.servicesSection {
+  padding: 80px 20px;
+  /* background-color: #ffffff; */
+}
+
+.sectionTitle {
+  font-family: var(--font-heading-services);
+  font-size: 48px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 80px;
+  color: var(--color-text-dark-services);
+}
+
+.serviceList {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* Class to reverse the layout */
+.serviceItem.reverse {
+  flex-direction: row-reverse;
+}
+
+.serviceContent {
+  flex: 1;
+  max-width: 50%;
+}
+
+.serviceNumber {
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid var(--color-gold-services);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-gold-services);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body-services);
+}
+
+.serviceTitle {
+  font-family: var(--font-heading-services);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-text-dark-services);
+  margin-bottom: 1rem;
+}
+
+.serviceDescription {
+  font-family: var(--font-body-services);
+  font-size: 18px;
+  color: var(--color-text-light-services);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.bookButton {
+  font-family: var(--font-body-services);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-gold-services);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.bookButton:hover {
+  transform: translateX(5px);
+}
+        
+.serviceImageWrapper {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+}
+
+.serviceImage {
+    width: 100%;
+  max-width: 640px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Responsive Design for Tablets and Mobile --- */
+@media (max-width: 992px) {
+  .serviceItem,
+  .serviceItem.reverse {
+    flex-direction: column-reverse; /* Stacks image on top of text */
+    gap: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .serviceContent, .serviceImageWrapper {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .serviceContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+  .serviceTitle {
+    font-size: 1.6rem;
+  }
+}

@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import React, { useState, useEffect, Suspense, lazy } from 'react';
 import Header from './Components/Header.jsx';
 import ContactMap from './Components/ContactMap.jsx';
+import Services from './Components/Services.jsx';
 import Testimonials from './Components/Testimonials.jsx';
 import WhatsAppChatWidget from './Components/WhatsAppChatWidget.jsx';
 import AnimatedSection from './Components/AnimatedSection.jsx';
@@ -20,6 +21,10 @@ function App() {
         <main>
         <AnimatedSection>
           <AboutMe />
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <Services />
         </AnimatedSection>
         
         <AnimatedSection>
