@@ -33,6 +33,7 @@ const Services = () => {
     // 2. Use the 'styles' object for class names
     <section className={styles.servicesSection}>
       <h2 className={styles.sectionTitle}>Services</h2>
+      <p className={styles.subtitle}>Your journey to inner peace begins here.</p>
       <div className={styles.serviceList}>
         {servicesData.map((service, index) => (
           <ServiceItem 
