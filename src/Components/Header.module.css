@@ -87,6 +87,7 @@
 }
 
 .navLinks a {
+    cursor: pointer;
     color: var(--color-text-dark);
     text-decoration: none;
     font-weight: 500;
@@ -279,3 +280,15 @@
     }
 }
 
+/* This specifically targets the social icons inside the slide-out mobile menu */
+.mobileSocial a::before,
+.mobileSocial a::after {
+  /* This forcefully removes any content from pseudo-elements that might be creating the slashes */
+  content: none !important;
+  display: none !important;
+}
+
+/* You can optionally add some margin for better spacing if needed */
+.mobileSocial a {
+  margin: 0 10px; /* Adjust as needed */
+}

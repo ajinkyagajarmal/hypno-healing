@@ -55,3 +55,17 @@ body, html {
     height: 100px;
   }
 }
+
+
+
+.App.menu-is-open > :not(header) {
+  filter: blur(4px) brightness(0.8);
+  transition: filter 0.3s ease-in-out;
+  
+  /* This prevents users from clicking or scrolling the blurred content */
+  pointer-events: none;
+  user-select: none;
+  
+  /* This helps prevent scrollbars from appearing on the blurred content */
+  overflow: hidden;
+}

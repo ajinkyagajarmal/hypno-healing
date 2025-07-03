@@ -101,6 +101,15 @@
   background-color: #333333;
   transform: translateX(5px);
 }
+
+.bookButton:focus {
+  outline: none;
+}
+
+.bookButton:focus-visible {
+  outline: 2px solid var(--color-gold-services);
+  outline-offset: 3px;
+}
         
 .serviceImageWrapper {
   flex: 1;
