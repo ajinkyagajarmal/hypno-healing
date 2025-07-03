@@ -126,10 +126,10 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait for 1000 milliseconds (1 seconds) then hide the preloader
+    // Wait for 1500 milliseconds (1.5 seconds) then hide the preloader
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 1500);
 
     // Cleanup the timer if the component unmounts
     return () => clearTimeout(timer);
