@@ -5,7 +5,7 @@
     --color-gold: #D32F2F;
     --color-text-dark: #333;
     --color-text-light: #ffffff;
-    --color-white: #ffffff;
+    --color-white: #f7f7f7;
 }
 
 /* ... All of your desktop styles from .header to .hamburger remain exactly the same ... */
@@ -26,7 +26,7 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
 }
@@ -170,6 +170,9 @@
 
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
+    .container{
+        justify-content: space-around;
+    }
     .topBar {
         display: none;
     }
@@ -235,7 +238,8 @@
     .mobileExtras {
         display: block;
         padding: 2rem 1.5rem; /* Consistent padding */
-        margin-top: 1rem; /* Space between nav links and this section */
+        /* margin-top: 1rem; */
+        flex-direction: column;
         border-top: 1px solid #eee; /* The line separator */
         width: 100%;
     }
@@ -244,8 +248,8 @@
     .mobileSocial {
         display: flex;
         justify-content: left; /* Align to the left */
-        gap: 1.5rem; /* Space between icons */
-        margin-bottom: 1.4rem; /* Space below icons, before contact info */
+        gap: 0.1rem; /* Space between icons */
+        margin-top: 1.4rem; /* Space below icons, before contact info */
         font-size: 1.5rem;
     }
 
@@ -256,6 +260,7 @@
 
     /* 2. Style the Contact Info */
     .mobileContact {
+        margin-bottom: 10px;
         display: flex;
         flex-direction: column; /* Stack phone and email vertically */
         gap: 1rem; /* Space between phone and email */
@@ -290,5 +295,5 @@
 
 /* You can optionally add some margin for better spacing if needed */
 .mobileSocial a {
-  margin: 0 10px; /* Adjust as needed */
+  margin: 0 0px; /* Adjust as needed */
 }

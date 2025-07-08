@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './Services.module.css'; // <-- 1. Import the modular CSS file
-import tarot from '../Assets/tarot.jpg'; // <-- Import your service images
-import reiki from '../Assets/reiki.jpg'; // <-- Import your service images
+import tarot from '../Assets/tarot.webp'; // <-- Import your service images
+import reiki from '../Assets/reiki.webp'; // <-- Import your service images
 
 // ==================================================================
 //   CUSTOMIZE YOUR CONTENT HERE
@@ -40,6 +40,8 @@ const Services = () => {
             key={index} 
             service={service} 
             isReversed={index % 2 !== 0}
+            loading="lazy" // Optional: Lazy load images for performance
+            
           />
         ))}
       </div>

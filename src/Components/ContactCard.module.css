@@ -31,7 +31,8 @@
 }
 
 .middleCard {
-    background-color: #FFFAF8; 
+    /* background-color: #FFFAF8;  */
+    background-color: #efe6dd; 
 }
 
 /* Add a bottom border to all cards except the last one */

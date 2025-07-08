@@ -3,7 +3,7 @@ import styles from './AboutMe.module.css';
 
 // The image should be placed in your project, e.g., in an 'assets' folder,
 // and then imported like this.
-import profileImage from '../Assets/sample1.jpg'; // <-- IMPORTANT: Update this path
+import profileImage from '../Assets/sample1.webp'; // <-- IMPORTANT: Update this path
 
 const AboutMe = () => {
   return (
@@ -26,7 +26,7 @@ const AboutMe = () => {
 
         {/* Image Container */}
         <div className={styles.imageContainer}>
-          <img src={profileImage} alt="A woman with tarot cards" className={styles.profileImage} />
+          <img src={profileImage} alt="A woman with tarot cards" className={styles.profileImage} loading='lazy' />
         </div>
       </div>
     </div>
