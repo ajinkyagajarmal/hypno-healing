@@ -13,11 +13,11 @@ const AboutMe = () => {
         <div className={styles.textContainer}>
           <h1 className={styles.heading}>Namaste!</h1>
           <p className={styles.description}>
-            I’m a professional Tarot Card Reader, Reiki Healer, Astrologer, and Hypnotherapist with 13 years of experience. 
-            I am a claircognizant, who is passionate about helping people discover their true potential and live a more fulfilling life. 
-            I’ve always been drawn to the spiritual world and spent years studying and practicing different modalities to better understand the mind-body-spirit connection. 
-            My extensive training and practical experience have allowed me to develop a unique approach to healing and divination that incorporates the best of 
-            these ancient practices with modern techniques and technologies.
+          Welcome to HypnoHealing – where healing begins within.
+At the heart of this space is Mrs. Neha Pattel, a compassionate healer and certified hypnotherapist with over 10 years of experience. 
+With her calming presence and profound understanding of the mind, we’ve helped more than 500 individuals overcome anxiety, trauma, addiction, fear, and emotional distress.
+Each session at HypnoHealing with Mrs. Neha Pattel is a step toward balance, inner peace, and reconnecting with your true self. 
+Because healing isn’t just possible — it’s already waiting for you.
           </p>
           <button className={styles.knowMoreButton}>
             Know more

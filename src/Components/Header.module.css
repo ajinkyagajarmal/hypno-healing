@@ -64,7 +64,7 @@
 }
 
 .socialIcons a:hover, .contactInfo a:hover {
-    color: var(--color-gold);
+    color: var(--color-text-dark);
 }
 
 .mainNav {
