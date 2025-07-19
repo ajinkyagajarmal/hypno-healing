@@ -10,9 +10,9 @@
     --color-text-subtle: #555555;
     
     /* Background colors for the cards */
-    --color-bg-light: #f8f3eb; /* The light beige from the image */
+    --color-bg-light: #efe6dd; /* The light beige from the image */
     --color-bg-accent: #c72030; /* The mustard/gold from the image */
-
+/* f8f3eb */
     /* Arrow color */
     --color-arrow: #888888;
     --color-arrow-hover: #333333;
