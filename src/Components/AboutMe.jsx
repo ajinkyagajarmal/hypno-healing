@@ -3,7 +3,7 @@ import styles from './AboutMe.module.css';
 
 // The image should be placed in your project, e.g., in an 'assets' folder,
 // and then imported like this.
-import profileImage from '../Assets/sample1.webp'; // <-- IMPORTANT: Update this path
+import profileImage from '../Assets/nehaimage3.webp'; // <-- IMPORTANT: Update this path
 
 const AboutMe = () => {
   return (

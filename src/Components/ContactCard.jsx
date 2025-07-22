@@ -74,7 +74,7 @@ const ContactCard = () => {
         <div className={styles.infoCard}>
           <h3 className={styles.cardTitle1}>Location:</h3>
           <p className={styles.cardText}>
-            862, Saraswati Vihar, M.G.Road, Gurugram - 122002, Haryana, India.
+            Sr no - 58/2/6, Flat no - 1 Rajan Building, near Jedhe Vajan Kaata,<br /> Gokulnagar, Katraj-Kondwa road Pune - 411048
           </p>
         </div>
 

@@ -251,7 +251,8 @@ const WhatsAppChatWidget = ({
 
   const openWhatsApp = () => {
     const cleanPhoneNumber = phone.replace(/[^0-9]/g, '');
-    window.open(`https://wa.me/${cleanPhoneNumber}`, '_blank', 'noopener,noreferrer');
+    const message = encodeURIComponent('Hello, I would like to book a hypno healing session');
+    window.open(`https://wa.me/${cleanPhoneNumber}?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   return (

@@ -28,7 +28,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                     <div className={styles.socialIcons}>
                         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><img src={facebook} alt="Facebook" /></a>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><img src={instagram} alt="Instagram" /></a>
-                        <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><img src={whatsapp} alt="Whatsapp" /></a>
+                        <a href="https://wa.me/919764953382" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><img src={whatsapp} alt="Whatsapp" /></a>
                     </div>
                     <div className={styles.contactInfo}>
                         <a href="tel:+919764953382"><FaPhoneAlt /><span>+91 9764953382</span></a>
