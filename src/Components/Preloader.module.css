@@ -59,7 +59,7 @@
   }
 
   .logo {
-    width: 200px; /* Adjust logo size for tablets */
+    width: 280px; /* Adjust logo size for tablets */
     margin-bottom: 25px; /* Reduce space between logo and spinner */
   }
 
@@ -78,7 +78,7 @@
     border-width: 4px;
   }
 .logo {
-    width: 150px; /* Adjust logo size for mobile */
+    width: 200px; /* Adjust logo size for mobile */
     margin-bottom: 20px; /* Reduce space between logo and spinner */
   }
   .loadingText {
