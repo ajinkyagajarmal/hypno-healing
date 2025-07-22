@@ -15,6 +15,13 @@
   transition: opacity 0.5s ease;
 }
 
+.logo {
+  width: 300px; /* Adjust the size of your logo as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 30px; /* Space between logo and spinner */
+  transition: width 0.3s ease; /* Smooth transition for responsiveness */
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -51,6 +58,11 @@
     border-width: 4px;
   }
 
+  .logo {
+    width: 200px; /* Adjust logo size for tablets */
+    margin-bottom: 25px; /* Reduce space between logo and spinner */
+  }
+
   .loadingText {
     text-align: center;
     font-size: 1rem;
@@ -65,7 +77,10 @@
     height: 45px;
     border-width: 4px;
   }
-
+.logo {
+    width: 150px; /* Adjust logo size for mobile */
+    margin-bottom: 20px; /* Reduce space between logo and spinner */
+  }
   .loadingText {
     text-align: center;
     font-size: 0.9rem;
