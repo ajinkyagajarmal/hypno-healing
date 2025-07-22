@@ -223,8 +223,8 @@
 import React, { useState } from 'react';
 
 // --- You can customize these default values ---
-const DEFAULT_PHONE_NUMBER = '+91 976495338211'; 
-const DEFAULT_CONTACT_NAME = 'Neha Pattellll';
+const DEFAULT_PHONE_NUMBER = '+91 9764953382'; 
+const DEFAULT_CONTACT_NAME = 'Neha Pattel';
 const DEFAULT_HEADER_TITLE = 'Chat with us!';
 
 // --- NEW SVG Icons to match your design ---
@@ -241,8 +241,8 @@ const CloseIcon = () => (
 );
 
 const WhatsAppChatWidget = ({
-  phoneNumber = DEFAULT_PHONE_NUMBER,
-  contactName = DEFAULT_CONTACT_NAME,
+  phone = DEFAULT_PHONE_NUMBER,
+  contact = DEFAULT_CONTACT_NAME,
   headerTitle = DEFAULT_HEADER_TITLE,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -250,7 +250,7 @@ const WhatsAppChatWidget = ({
   const toggleChatBox = () => setIsOpen(!isOpen);
 
   const openWhatsApp = () => {
-    const cleanPhoneNumber = phoneNumber.replace(/[^0-9]/g, '');
+    const cleanPhoneNumber = phone.replace(/[^0-9]/g, '');
     window.open(`https://wa.me/${cleanPhoneNumber}`, '_blank', 'noopener,noreferrer');
   };
 
@@ -423,7 +423,7 @@ const WhatsAppChatWidget = ({
                   <TelephoneIcon />
                 </div>
                 <div className="whatsapp-contact-info">
-                  <span className="whatsapp-contact-name">{contactName}</span>
+                  <span className="whatsapp-contact-name">{contact}</span>
                   <span className="whatsapp-contact-status">Online</span>
                 </div>
               </div>
