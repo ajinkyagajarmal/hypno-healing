@@ -223,8 +223,8 @@
 import React, { useState } from 'react';
 
 // --- You can customize these default values ---
-const DEFAULT_PHONE_NUMBER = '+91 9764953382'; // <-- IMPORTANT: Replace with your number
-const DEFAULT_CONTACT_NAME = 'Neha Pattel';
+const DEFAULT_PHONE_NUMBER = '+91 976495338211'; 
+const DEFAULT_CONTACT_NAME = 'Neha Pattellll';
 const DEFAULT_HEADER_TITLE = 'Chat with us!';
 
 // --- NEW SVG Icons to match your design ---
