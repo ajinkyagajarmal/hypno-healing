@@ -14,14 +14,14 @@ const servicesData = [
     title: 'Hypno Healing Therapy',
     description: "As a professional hypnotherapist, I have helped countless individuals just like you tap into the power of their subconscious mind to make positive changes in their lives. From managing anxiety to eliminating phobias to addiction cessations to reducing stress, hypnotherapy is the ultimate tool for breaking free from the limiting beliefs and habits that have been holding you back. My approach to hypnotherapy is grounded in the latest research and techniques, and I tailor each session to meet your specific needs and goals. Through a combination of relaxation, visualization, and suggestion, I'll guide you into a state of heightened awareness where you can access your subconscious mind and make positive changes from within. Don't wait another day to start living the life you deserve. Contact me now to schedule a consultation and discover how hypnotherapy can transform your life.",
     imageSrc: tarot, // Path from your `public/images` folder
-    phoneNumber: '+91 9890467841' // Replace with your WhatsApp number
+    phoneNumber: '+91 9764953382' // Replace with your WhatsApp number
   },
   {
     number: '2',
-    title: 'Astrology & Tarot Reading',
+    title: 'Astrology Consultations',
     description: "This ancient Indian knowledge system reveals how cosmic manifestation of Planets, Sun, Moon, Constellations & other heavenly bodies interact with each other and influence our lives. This impact can be in the form of opportunities, challenges, obstacles or facilitations depending on one’s karma & destiny. Being a Vedic Astrologer, I formulate and analyze the astrological charts of my clients & help them resolve their personal or professional problems, such as career planning, professional growth, relationship advice, spiritual guidance, health advice, interpersonal advice, and parenting matters.",
     imageSrc: reiki, // Path from your `public/images` folder
-    phoneNumber: '+91 9890467841' // Replace with your WhatsApp number
+    phoneNumber: '+91 9764953382' // Replace with your WhatsApp number
   },
   // Add more services here
 ];

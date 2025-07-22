@@ -31,8 +31,8 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                         <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><img src={whatsapp} alt="Whatsapp" /></a>
                     </div>
                     <div className={styles.contactInfo}>
-                        <a href="tel:+919871202811"><FaPhoneAlt /><span>+91 9871202811</span></a>
-                        <a href="mailto:connect@shwetaranjan.com"><FaEnvelope /><span>connect@shwetaranjan.com</span></a>
+                        <a href="tel:+919764953382"><FaPhoneAlt /><span>+91 9764953382</span></a>
+                        <a href="mailto:hypnohealling1@gmail.com"><FaEnvelope /><span>hypnohealling1@gmail.com</span></a>
                     </div>
                 </div>
             </div>

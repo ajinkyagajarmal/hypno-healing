@@ -83,11 +83,11 @@ const ContactCard = () => {
           <h3 className={styles.cardTitle}>Contact:</h3>
           <p className={styles.cardText}>
             <span className={styles.contactLabel1}>Phone:</span>
-            <a href="tel:+919871202811" className={styles.contactLink}>+91 9871202811</a>
+            <a href="tel:+919764953382" className={styles.contactLink}>+91 9764953382</a>
           </p>
           <p className={styles.cardText}>
             <span className={styles.contactLabel1}>Email:</span>
-            <a href="mailto:connect@nehapatel.com" className={styles.contactLink}>connect@nehapatel.com</a>
+            <a href="mailto:hypnohealling1@gmail.com" className={styles.contactLink}>hypnohealling1@gmail.com</a>
           </p>
         </div>
 
