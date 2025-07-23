@@ -2,8 +2,8 @@
 
 /* --- CUSTOMIZE YOUR FONTS AND COLORS HERE --- */
 :root {
-  --font-heading-services: 'Raleway', serif;
-  --font-body-services: 'Raleway', serif;
+  --font-heading-services: 'Raleway', sans-serif;
+  --font-body-services: 'Raleway', sans-serif;
   --color-gold-services: #D32F2F;
   --color-text-dark-services: #333333;
   --color-text-light-services: #555555;
@@ -81,7 +81,7 @@
 
 .serviceDescription {
   font-family: var(--font-body-services);
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-text-light-services);
   line-height: 1.7;
   margin-bottom: 2rem;

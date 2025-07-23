@@ -2,7 +2,7 @@
 /*               EASY CUSTOMIZATION AREA (EDIT THESE)                 */
 /* ------------------------------------------------------------------ */
 :root {
-    --font-serif: 'Raleway', serif; /* Font for the main title */
+    --font-serif: 'Raleway', sans-serif; /* Font for the main title */
     --font-sans-serif: 'Raleway', sans-serif; /* Font for body text */
 
     --color-text-dark: #333333;
@@ -51,6 +51,7 @@
 }
 
 .subtitle {
+    font-family: var(--font-serif);
     font-size: 1.1rem;
     color: var(--color-text-subtle);
     margin-bottom: 3rem;

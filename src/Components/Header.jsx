@@ -69,13 +69,13 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                                 <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><FaWhatsapp /></a>
                             </div> */}
                             <div className={styles.mobileContact}>
-                                <a href="tel:+919871202811"><FaPhoneAlt /><span>+91 9871202811</span></a>
-                                <a href="mailto:connect@shwetaranjan.com"><FaEnvelope /><span>connect@shwetaranjan.com</span></a>
+                                <a href="tel:+919764953382"><FaPhoneAlt /><span>+91 9764953382</span></a>
+                                <a href="mailto:hypnohealling1@gmail.com"><FaEnvelope /><span>hypnohealling1@gmail.com</span></a>
                             </div>
                             <div className={styles.mobileSocial}>
                                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-                                <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><FaWhatsapp /></a>
+                                <a href="https://wa.me/919764953382" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><FaWhatsapp /></a>
                             </div>
                         </div>
                     </nav>

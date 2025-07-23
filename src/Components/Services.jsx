@@ -18,7 +18,7 @@ const servicesData = [
   },
   {
     number: '2',
-    title: 'Astrology Consultations',
+    title: 'Astrology & Tarot Reading',
     description: "This ancient Indian knowledge system reveals how cosmic manifestation of Planets, Sun, Moon, Constellations & other heavenly bodies interact with each other and influence our lives. This impact can be in the form of opportunities, challenges, obstacles or facilitations depending on one’s karma & destiny. Being a Vedic Astrologer, I formulate and analyze the astrological charts of my clients & help them resolve their personal or professional problems, such as career planning, professional growth, relationship advice, spiritual guidance, health advice, interpersonal advice, and parenting matters.",
     imageSrc: reiki, // Path from your `public/images` folder
     phoneNumber: '+91 9764953382' // Replace with your WhatsApp number
