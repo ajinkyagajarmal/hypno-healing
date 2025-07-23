@@ -5,7 +5,7 @@ import styles from './ContactMap.module.css';
 const ContactMap = () => {
   // You can get this src by going to Google Maps, finding your location,
   // and clicking "Share" -> "Embed a map".
-  const mapSrc = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.2058013886826!2d73.85951317496269!3d18.510566482581087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c06baea456fb%3A0x8b69d7e98a0d77cb!2sKasturi%20Chowk%2C%20Raviwar%20Peth%2C%20Pune%2C%20Maharashtra%20411002!5e1!3m2!1sen!2sin!4v1750936657917!5m2!1sen!2sin";
+  const mapSrc = "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3597.45518136408!2d73.87161637518993!3d18.4510192826291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTjCsDI3JzAzLjciTiA3M8KwNTInMjcuMSJF!5e1!3m2!1sen!2sin!4v1753285575334!5m2!1sen!2sin";
 
   return (
     <section id="contact" className={styles.contactSection}>

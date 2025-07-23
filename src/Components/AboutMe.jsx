@@ -6,6 +6,15 @@ import styles from './AboutMe.module.css';
 import profileImage from '../Assets/nehaimage3.webp'; // <-- IMPORTANT: Update this path
 
 const AboutMe = () => {
+    // 1. Set the year the experience started.
+  // Let's assume 10 years of experience in 2024 means she started in 2014.
+  const experienceStartYear = 2015; 
+
+  // 2. Get the current year.
+  const currentYear = new Date().getFullYear();
+
+  // 3. Calculate the years of experience.
+  const yearsOfExperience = currentYear - experienceStartYear;
   return (
     <div className={styles.aboutSection}>
       <div className={styles.container}>
@@ -14,10 +23,10 @@ const AboutMe = () => {
           <h1 className={styles.heading}>Namaste!</h1>
           <p className={styles.description}>
           Welcome to HypnoHealing – where healing begins within.
-At the heart of this space is Mrs. Neha Pattel, a compassionate healer and certified hypnotherapist with over 10 years of experience. 
-With her calming presence and profound understanding of the mind, we’ve helped more than 500 individuals overcome anxiety, trauma, addiction, fear, and emotional distress.
-Each session at HypnoHealing with Mrs. Neha Pattel is a step toward balance, inner peace, and reconnecting with your true self. 
-Because healing isn’t just possible — it’s already waiting for you.
+At the heart of this space is <strong>Mrs. Neha Pattel</strong>, a compassionate healer and certified hypnotherapist with over <strong>{yearsOfExperience} years of experience</strong>. 
+With her calming presence and profound understanding of the mind, we’ve helped <strong>more than 500 individuals</strong> overcome anxiety, trauma, addiction, fear, and emotional distress.
+Each session at HypnoHealing with <strong>Mrs. Neha Pattel</strong> is a step toward balance, inner peace, and reconnecting with your true self. <br />
+<strong>Because healing isn’t just possible — it’s already waiting for you.</strong>
           </p>
           <button className={styles.knowMoreButton}>
             Know more
