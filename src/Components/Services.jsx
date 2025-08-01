@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styles from './Services.module.css'; // <-- 1. Import the modular CSS file
-import tarot from '../Assets/tarot.webp'; // <-- Import your service images
-import reiki from '../Assets/reiki.webp'; // <-- Import your service images
+import tarot from '../Assets/reiki.webp'; // <-- Import your service images
+import reiki from '../Assets/tarot.webp'; // <-- Import your service images
 
 // ==================================================================
 //   CUSTOMIZE YOUR CONTENT HERE
