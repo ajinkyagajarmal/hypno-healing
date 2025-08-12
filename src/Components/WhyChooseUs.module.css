@@ -2,9 +2,9 @@
 
 .whyChooseUsContainer {
     padding: 2rem 2rem;
-    font-family: 'Raleway', serif;
+    font-family: 'Raleway', sans-serif;
     background-color: transparent;
-    margin: 1rem auto;
+    margin: 0rem auto;
 }
 
 .container {
@@ -42,7 +42,7 @@
 }
 
 .title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
     color: #333;
     margin-bottom: 0.1rem;
@@ -149,6 +149,7 @@
     }
     .title {
         font-size: 2.2rem;
+        text-align: center;
     }
     /* On mobile, we adjust the variables to show 1 full item and one half-item */
     .featuresCarousel {

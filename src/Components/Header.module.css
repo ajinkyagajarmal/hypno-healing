@@ -169,6 +169,18 @@
 
 
 /* --- Responsive Design --- */
+
+@media (max-width: 1024px) {
+    .container{
+        justify-content: space-around;
+    }
+    .topBar {
+        justify-content: space-around;
+    }
+    
+}
+
+
 @media (max-width: 992px) {
     .container{
         justify-content: space-around;
