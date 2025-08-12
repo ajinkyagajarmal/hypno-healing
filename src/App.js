@@ -73,23 +73,28 @@
 
 import React, { useState, useEffect } from 'react'; // Import useState
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useScrollSync } from './hooks/useScrollSync'; 
+// import { useScrollSync } from './hooks/useScrollSync'; 
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // --- Your Components ---
 import Header from './Components/Header.jsx';
 import Preloader from './Components/Preloader.jsx';
 import ContactMap from './Components/ContactMap.jsx';
 import Services from './Components/Services.jsx';
+import Gallery from './Components/Gallery.jsx';
 import Testimonials from './Components/Testimonials.jsx';
 import WhatsAppChatWidget from './Components/WhatsAppChatWidget.jsx';
 import AnimatedSection from './Components/AnimatedSection.jsx';
 import Footer from './Components/Footer.jsx';
 import AboutMe from './Components/AboutMe.jsx';
+import WhyChooseUs from './Components/WhyChooseUs.jsx';
 
 import './App.css';
 
 const MainPage = () => {
-  useScrollSync();
+  // useScrollSync();
 
   return (
     <>
@@ -99,9 +104,19 @@ const MainPage = () => {
             <AboutMe />
           </AnimatedSection>
         </section>
+        <section id="why-us">
+          <AnimatedSection>
+            <WhyChooseUs />
+          </AnimatedSection>
+        </section>
         <section id="services">
           <AnimatedSection>
             <Services />
+          </AnimatedSection>
+        </section>
+        <section id="gallery">
+          <AnimatedSection>
+            <Gallery />
           </AnimatedSection>
         </section>
         <section id="testimonials">
@@ -120,6 +135,15 @@ const MainPage = () => {
 };
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // You can adjust this
+      once: true,     // Animation happens only once
+      offset: 100, 
+    });
+  }, []);
+
   // 1. Move menuOpen state here from Header.js
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -154,6 +178,7 @@ function App() {
           <Route path="/" element={<MainPage />} />
           <Route path="/home" element={<MainPage />} />
           <Route path="/services" element={<MainPage />} />
+          <Route path="/gallery" element={<MainPage />} />
           <Route path="/testimonials" element={<MainPage />} />
           <Route path="/contact" element={<MainPage />} />
         </Routes>

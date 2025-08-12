@@ -1,0 +1,120 @@
+/* src/Components/Gallery.module.css */
+
+.gallerySection {
+  background-color: transparent;
+  padding: 5rem 0;
+  overflow-x: hidden;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  font-weight: 400;
+  margin-bottom: 3rem;
+}
+
+.sliderContainer {
+  position: relative;
+ 
+}
+
+.slideWrapper {
+ padding: auto;
+}
+
+
+/* --- THE "JERK" (CLS) FIX --- */
+.slide {
+    overflow: hidden;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  margin: 0 10px; 
+  aspect-ratio: 4/3;
+  background-color: transparent; /* A light grey placeholder color */
+}
+
+/* Make the image fill the container that now has a reserved size */
+.slideImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+  overflow: hidden;
+}
+
+.slide:hover .slideImage {
+  transform: scale(1.05);
+}
+
+
+/* --- CUSTOM ARROW STYLING --- */
+.slickArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  /* REMOVED: width, height, border-radius, background-color, box-shadow */
+  
+  /* NEW STYLES for the icon itself */
+  color: #333;      /* A dark, visible arrow color */
+  font-size: 2.5rem; /* Makes the < and > icons much larger */
+}
+
+.slickArrow:hover {
+  background-color: white;
+  transform: translateY(-50%) scale(1.1);
+  color: #000;
+}
+
+.slickPrev {
+  left: -20px;
+}
+.slickNext {
+  right: -20px;
+}
+
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1280px) {
+  .slickPrev { left: 0px; }
+  .slickNext { right: 0px; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+  .title { font-size: 2.2rem; }
+  /* Change aspect ratio for mobile if needed (e.g., more portrait-like) */
+  /* .slide { aspect-ratio: 3 / 4; } */
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0; }
+  .sliderContainer { margin: 0; }
+  /* .slideWrapper { padding: 0 8px; }
+  .slide { margin: 0 8px; } */
+}

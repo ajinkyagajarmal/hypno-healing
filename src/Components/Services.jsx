@@ -77,7 +77,7 @@ const ServiceItem = ({ service, isReversed }) => {
           {/* <span style={{ fontSize: '1.2rem' }}>→</span> */}
         </button>
       </div>
-      <div className={styles.serviceImageWrapper}>
+      <div className={styles.serviceImageWrapper} data-aos={isReversed ? 'fade-right' : 'fade-left'}>
         <img src={imageSrc} alt={title} className={styles.serviceImage} />
       </div>
     </div>

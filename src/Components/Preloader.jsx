@@ -9,10 +9,11 @@ const Preloader = ({ slogan }) => {
       <img 
         src={logoImage} 
         alt="Company Logo" 
-        className={styles.logo} 
+        className={styles.logo}
+        data-aos="fade-down" 
       />
-      <div className={styles.loader}></div>
-      {slogan && <h1 className={styles.loadingText}>{slogan}</h1>}
+      <div className={styles.loader} ></div>
+      {slogan && <h1 className={styles.loadingText} data-aos="fade-up">{slogan}</h1>}
     </div>
   );
 };

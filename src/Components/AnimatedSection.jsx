@@ -1,38 +1,20 @@
 // src/Components/AnimatedSection.jsx
 
-import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const AnimatedSection = ({ children, className }) => {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true, // Only trigger the animation once
-    threshold: 0.2,    // Trigger when 20% of the element is in view
-  });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
-
-  const variants = {
-    hidden: { opacity: 0, y: 50 }, // Start hidden and 50px down
-    visible: { 
-      opacity: 1, 
-      y: 0, 
-      transition: { duration: 0.8, ease: 'easeOut' } // Animate to visible and original position
-    },
+const AnimatedSection = ({ children }) => {
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
   };
 
   return (
     <motion.div
-      ref={ref}
-      animate={controls}
+      variants={sectionVariants}
       initial="hidden"
-      variants={variants}
-      className={className}
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       {children}
     </motion.div>

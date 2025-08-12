@@ -4,78 +4,76 @@ import { useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
-// This maps your URL paths to the section IDs on your page
 const sectionPaths = {
   '/': 'home',
   '/home': 'home',
+  '/why-us': 'why-us',
   '/services': 'services',
+  '/gallery': 'gallery',
   '/testimonials': 'testimonials',
   '/contact': 'contact',
 };
 
-export const useScrollSync = () => {
+// The hook now accepts the setState function for the active index
+export const useScrollSync = (setActiveIndex) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const isInitialLoad = useRef(true);
-  const isScrolling = useRef(false);
   const scrollTimeout = useRef(null);
 
-  // Effect 1: On initial load, read the URL and scroll to the section
+  // Effect 1: On initial page load, scroll to the correct section if URL is not "/"
   useEffect(() => {
-    if (isInitialLoad.current) {
-      const path = location.pathname;
-      const sectionId = sectionPaths[path];
-      
-      if (sectionId) {
-        // Use a timeout to ensure the component has rendered
-        setTimeout(() => {
-          scroller.scrollTo(sectionId, {
-            duration: 800,
-            delay: 0,
-            smooth: 'easeInOutQuart',
-            offset: -70,
-          });
-        }, 100);
-      }
-      isInitialLoad.current = false;
+    const path = location.pathname;
+    if (path !== '/') {
+        const sectionId = sectionPaths[path];
+        if (sectionId) {
+            setTimeout(() => {
+            scroller.scrollTo(sectionId, {
+                duration: 800,
+                delay: 0,
+                smooth: 'easeInOutQuart',
+                offset: -70,
+            });
+            }, 100);
+        }
     }
-  }, [location.pathname]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // Run only once on initial load
 
-  // Effect 2: On scroll, determine the section and update the URL
+  // Effect 2: On scroll, find the active section and update state/URL
   useEffect(() => {
     const handleScroll = () => {
-      // Set a flag to prevent the scroll listener from firing while react-scroll is animating
-      if (isScrolling.current) return;
+      const sectionIds = Object.values(sectionPaths);
+      let currentSectionId = 'home'; // Default to home
+      let currentSectionIndex = 0;
 
-      const sections = Object.values(sectionPaths);
-      let currentSectionId = '';
-
-      for (const id of sections) {
+      // Find which section is most visible in the viewport
+      for (let i = 0; i < sectionIds.length; i++) {
+        const id = sectionIds[i];
         const element = document.getElementById(id);
         if (element) {
           const rect = element.getBoundingClientRect();
-          // Check if the section is in the top half of the viewport
-          if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          // The section is considered active if its top is within the top 40% of the viewport
+          if (rect.top <= window.innerHeight * 0.4 && rect.bottom >= window.innerHeight * 0.4) {
             currentSectionId = id;
+            currentSectionIndex = i > 4 ? 4 : i > 2 ? i-1 : i; // Adjust index to match featuresList
             break;
           }
         }
       }
+
+      // Update the active index state
+      setActiveIndex(currentSectionIndex);
       
-      if (currentSectionId) {
-        // Find the corresponding path for the section ID
-        const path = Object.keys(sectionPaths).find(key => sectionPaths[key] === currentSectionId);
-        // Update the URL without adding to history stack to avoid back-button issues
-        if (path && location.pathname !== path) {
-           navigate(path, { replace: true });
-        }
+      // Update the URL
+      const path = Object.keys(sectionPaths).find(key => sectionPaths[key] === currentSectionId);
+      if (path && location.pathname !== path) {
+         navigate(path, { replace: true });
       }
     };
-    
-    // Add a debounced scroll listener to avoid performance issues
+
     const debouncedScroll = () => {
         clearTimeout(scrollTimeout.current);
-        scrollTimeout.current = setTimeout(handleScroll, 150);
+        scrollTimeout.current = setTimeout(handleScroll, 100);
     }
 
     window.addEventListener('scroll', debouncedScroll);
@@ -83,5 +81,5 @@ export const useScrollSync = () => {
       window.removeEventListener('scroll', debouncedScroll);
       clearTimeout(scrollTimeout.current);
     };
-  }, [location.pathname, navigate]);
+  }, [location.pathname, navigate, setActiveIndex]);
 };

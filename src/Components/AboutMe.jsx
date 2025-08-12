@@ -19,7 +19,7 @@ const AboutMe = () => {
     <div className={styles.aboutSection}>
       <div className={styles.container}>
         {/* Text Content Container */}
-        <div className={styles.textContainer}>
+        <div className={styles.textContainer} data-aos='fade-right'>
           <h1 className={styles.heading}>Namaste!</h1>
           <p className={styles.description}>
           Welcome to HypnoHealing – where healing begins within.
@@ -34,7 +34,7 @@ Each session at HypnoHealing with <strong>Mrs. Neha Pattel</strong> is a step to
         </div>
 
         {/* Image Container */}
-        <div className={styles.imageContainer}>
+        <div className={styles.imageContainer} data-aos='fade-left'>
           <img src={profileImage} alt="A woman with tarot cards" className={styles.profileImage} loading='lazy' />
         </div>
       </div>

@@ -59,7 +59,7 @@
 .heading {
     margin-top: 0;
     margin-bottom: 14px;
-    font-family: 'Raleway', sans-serif; /* Serif font for the heading */
+    font-family: 'Raleway', serif; /* Serif font for the heading */
     font-size: 3rem;
     font-weight: 600;
     color: #333;

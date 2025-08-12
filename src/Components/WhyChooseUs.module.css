@@ -1,0 +1,161 @@
+/* src/Components/WhyChooseUs.module.css (New and Simplified) */
+
+.whyChooseUsContainer {
+    padding: 2rem 2rem;
+    font-family: 'Raleway', serif;
+    background-color: transparent;
+    margin: 1rem auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 4rem;
+    align-items: start; /* Align text to the top */
+}
+
+.introText {
+    text-align: left;
+    position: sticky; /* Makes text stick as you scroll past the list */
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.introImageContainer {
+    margin-bottom: 2rem; /* Space between image and title */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Aligns image to the left on desktop */
+}
+
+.introImage {
+    max-width: 540px; /* Control the max size of the image */
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 12px; /* Optional: adds rounded corners */
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* The list of features */
+.featuresList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* The space between items */
+}
+
+/* This is the "window" or mask for our scrolling list */
+.featuresCarousel {
+    /* Define CSS variables for easier calculations and responsiveness */
+    --item-height: 120px; /* Height of a single feature item */
+    --item-gap: 1.5rem;   /* Gap between items */
+    --visible-items: 2;   /* Number of fully visible items */
+    
+    /* Calculate the total height to show 2 full items and one half-item */
+    height: calc((var(--item-height) * var(--visible-items)) + (var(--item-gap) * var(--visible-items)) + (var(--item-height) / 2));
+    overflow: hidden;
+    position: relative;
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+/* This container holds all the items and is the element we move with transform */
+.scrollWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--item-gap);
+}
+
+/* Each individual feature item */
+
+.featureItem {
+    display: flex;
+    align-items: center; /* Center content vertically */
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    background-color: #efe6dd;
+    border-radius: 16px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    height: var(--item-height); /* Enforce a fixed height */
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+/* Add a subtle hover effect for interactivity */
+/* .featureItem:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+} */
+
+.iconWrapper {
+    font-size: 1.8rem;
+    margin-right: 1.5rem;
+    margin-top: 0px; /* Align icon slightly better with the title */
+    flex-shrink: 0;
+}
+
+.textWrapper {
+    text-align: left;
+}
+
+.featureTitle {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack into a single column */
+        gap: 3rem;
+    }
+    .introText {
+        position: static; /* Unstick the text on smaller screens */
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .whyChooseUsContainer {
+        padding: 4rem 1rem;
+    }
+    .title {
+        font-size: 2.2rem;
+    }
+    /* On mobile, we adjust the variables to show 1 full item and one half-item */
+    .featuresCarousel {
+        --visible-items: 1;
+        --item-height: 110px;
+        --item-gap: 1rem;
+        -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    }
+}
