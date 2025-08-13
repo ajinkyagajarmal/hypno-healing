@@ -67,7 +67,6 @@
 
 
 
-// src/Components/Gallery.jsx
 // src/Components/Gallery.jsx (using Swiper.js)
 
 import React from 'react';
@@ -78,6 +77,7 @@ import { Autoplay, Pagination } from 'swiper/modules';
 import styles from './Gallery.module.css';
 
 // 3. Import Swiper core and module styles
+
 import 'swiper/css';
 import 'swiper/css/pagination';
 

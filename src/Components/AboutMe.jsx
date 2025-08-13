@@ -35,7 +35,12 @@ Each session at HypnoHealing with <strong>Mrs. Neha Pattel</strong> is a step to
 
         {/* Image Container */}
         <div className={styles.imageContainer} data-aos='fade-left'>
-          <img src={profileImage} alt="A woman with tarot cards" className={styles.profileImage} loading='lazy' />
+          <img 
+          src={profileImage} 
+          alt="Profile Image" 
+          className={styles.profileImage} 
+          // loading='lazy'
+          fetchpriority="high"  />
         </div>
       </div>
     </div>

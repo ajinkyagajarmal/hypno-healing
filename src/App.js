@@ -69,8 +69,6 @@
 
 // src/App.js
 
-// src/App.js
-
 import React, { useState, useEffect } from 'react'; // Import useState
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import { useScrollSync } from './hooks/useScrollSync'; 
