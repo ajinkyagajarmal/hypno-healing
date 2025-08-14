@@ -4,7 +4,7 @@
     padding: 2rem 2rem;
     font-family: 'Raleway', sans-serif;
     background-color: transparent;
-    margin: 0rem auto;
+    margin: 2rem auto;
 }
 
 .container {
@@ -65,7 +65,7 @@
 /* This is the "window" or mask for our scrolling list */
 .featuresCarousel {
     /* Define CSS variables for easier calculations and responsiveness */
-    --item-height: 120px; /* Height of a single feature item */
+    --item-height: 100px; /* Height of a single feature item */
     --item-gap: 1.5rem;   /* Gap between items */
     --visible-items: 2;   /* Number of fully visible items */
     
@@ -88,7 +88,7 @@
 
 .featureItem {
     display: flex;
-    align-items: center; /* Center content vertically */
+    align-items: flex-start;
     padding: 0.5rem 1rem 0.5rem 1rem;
     background-color: #efe6dd;
     border-radius: 16px;
@@ -106,9 +106,10 @@
 
 .iconWrapper {
     font-size: 1.8rem;
-    margin-right: 1.5rem;
+    margin-right: 1.2rem;
     margin-top: 0px; /* Align icon slightly better with the title */
     flex-shrink: 0;
+    margin-left: 0.5rem;
 }
 
 .textWrapper {
