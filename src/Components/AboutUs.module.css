@@ -27,7 +27,7 @@
     font-family: 'Raleway', sans-serif;
     font-size: 1.1rem;
     color: #555; /* Slightly darker for better readability */
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     font-weight: 700; /* Normal weight for subtitle */
 }
 
@@ -46,13 +46,14 @@
 }
 
 .columnTitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #333;
     margin-top: 0;
     margin-bottom: 0.2rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .columnTitle span {
@@ -64,10 +65,12 @@
     font-size: 1.05rem;
     line-height: 1.7;
     color: #555;
+    font-weight: 500;
     margin-bottom: 1rem;
 }
 
 .listIntro {
+    text-align: center;
     font-size: 1rem;
     color: #555;
     font-weight: 700;
@@ -75,8 +78,9 @@
 }
 
 .serviceList {
-    list-style: none;
-    padding-left: 0;
+    font-weight: 500;
+    list-style:disc;
+    padding-left: 12px;
     margin-bottom: 1.5rem;
     justify-items: left;
 }
@@ -85,7 +89,7 @@
     font-size: 1rem;
     color: #555;
     margin-bottom: 0.75rem;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
     position: relative;
 }
 
@@ -117,6 +121,15 @@
         gap: 3rem; /* Increase gap for vertical stacking */
     }
 
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 1.4rem; /* Reduced margin for smaller screens */
+    }
+
     .aboutColumn, .servicesColumn {
         text-align: center; /* Center text when stacked */
     }
@@ -130,6 +143,15 @@
 @media (max-width: 768px) {
     .aboutUsContainer {
         padding: 4rem 1rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.2rem; /* Reduced margin for smaller screens */
     }
 
     .servicesColumn {

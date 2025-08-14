@@ -69,28 +69,45 @@
 
 // src/App.js
 
-import React, { useState, useEffect } from 'react'; // Import useState
+import React, { useState, useEffect, lazy, Suspense } from 'react'; // Import useState
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useScrollSync } from './hooks/useScrollSync'; 
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+  import './App.css';
 // --- Your Components ---
 import Header from './Components/Header.jsx';
-import Preloader from './Components/Preloader.jsx';
-import ContactMap from './Components/ContactMap.jsx';
-import Services from './Components/Services.jsx';
-import Gallery from './Components/Gallery.jsx';
-import Testimonials from './Components/Testimonials.jsx';
-import WhatsAppChatWidget from './Components/WhatsAppChatWidget.jsx';
-import AnimatedSection from './Components/AnimatedSection.jsx';
 import Footer from './Components/Footer.jsx';
+import Preloader from './Components/Preloader.jsx';
+import WhatsAppChatWidget from './Components/WhatsAppChatWidget.jsx';
 import AboutMe from './Components/AboutMe.jsx';
-import AboutUs from './Components/AboutUs.jsx'; 
-import WhyChooseUs from './Components/WhyChooseUs.jsx';
 
-import './App.css';
+
+// import ContactMap from './Components/ContactMap.jsx';
+// import Services from './Components/Services.jsx';
+// import Gallery from './Components/Gallery.jsx';
+// import Testimonials from './Components/Testimonials.jsx';
+// import AnimatedSection from './Components/AnimatedSection.jsx';
+// import AboutUs from './Components/AboutUs.jsx'; 
+// import WhyChooseUs from './Components/WhyChooseUs.jsx';
+
+// --- LAZY-LOAD ALL "BELOW THE FOLD" COMPONENTS ---
+// These components are not visible on initial load, so we defer their code.
+const WhyChooseUs = lazy(() => import('./Components/WhyChooseUs.jsx'));
+const Services = lazy(() => import('./Components/Services.jsx'));
+const Gallery = lazy(() => import('./Components/Gallery.jsx'));
+const Testimonials = lazy(() => import('./Components/Testimonials.jsx'));
+const ContactMap = lazy(() => import('./Components/ContactMap.jsx'));
+const AnimatedSection = lazy(() => import('./Components/AnimatedSection.jsx'));
+const AboutUs = lazy(() => import('./Components/AboutUs.jsx'));
+
+
+
+const SectionLoader = () => (
+  // We reserve space to prevent the page from jumping when the component loads.
+  <div style={{ minHeight: '100vh' }} />
+);
 
 const MainPage = () => {
   // useScrollSync();
@@ -103,6 +120,7 @@ const MainPage = () => {
             <AboutMe />
           </AnimatedSection>
         </section>
+        <Suspense fallback={<SectionLoader />}>
         <section id="services">
           <AnimatedSection>
             <Services />
@@ -133,6 +151,7 @@ const MainPage = () => {
             <ContactMap />
           </AnimatedSection>
         </section>
+        </Suspense>
       </main>
     </>
   );
@@ -179,12 +198,14 @@ function App() {
         <div className="header-spacer"></div> 
         
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          {/* <Route path="/" element={<MainPage />} />
           <Route path="/home" element={<MainPage />} />
           <Route path="/services" element={<MainPage />} />
+          <Route path="/about-us" element={<MainPage />} />
           <Route path="/gallery" element={<MainPage />} />
           <Route path="/testimonials" element={<MainPage />} />
-          <Route path="/contact" element={<MainPage />} />
+          <Route path="/contact" element={<MainPage />} /> */}
+          <Route path="*" element={<MainPage />} />
         </Routes>
         
         <Footer />

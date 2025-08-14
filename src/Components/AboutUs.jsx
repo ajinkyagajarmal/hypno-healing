@@ -7,10 +7,10 @@ const AboutUs = () => {
   return (
     <div className={styles.aboutUsContainer}>
         <h2 className={styles.title}>AboutUs</h2>
-        <p className={styles.subtitle}>Our Mission and Vission.</p>
+        <p className={styles.subtitle}>Helping you rewrite the stories your subconscious mind tells.</p>
       <div className={styles.container}>
         {/* Main Introduction Column */}
-        <div className={styles.aboutColumn}>
+        <div className={styles.aboutColumn} data-aos='fade-right'>
           <h3 className={styles.columnTitle}>
              About Hypnohealing<span role="img" aria-label="leaf">🌿</span>
           </h3>
@@ -23,7 +23,7 @@ const AboutUs = () => {
         </div>
 
         {/* Hypnotherapy Services Column */}
-        <div className={styles.servicesColumn}>
+        <div className={styles.servicesColumn} data-aos='fade-up'>
           <h3 className={styles.columnTitle}>
             What We Help With<span role="img" aria-label="sparkles">💫</span>
           </h3>
@@ -46,7 +46,7 @@ const AboutUs = () => {
         </div>
 
         {/* Astrology Services Column */}
-        <div className={styles.servicesColumn}>
+        <div className={styles.servicesColumn} data-aos='fade-left'>
           <h3 className={styles.columnTitle}>
             Astrology Consultations <span role="img" aria-label="crystal ball">🔮</span>
           </h3>
@@ -56,6 +56,12 @@ const AboutUs = () => {
             <li>Business Growth</li>
             <li>Education, Travel</li>
             <li>Mental Peace & Energy Balance</li>
+            <li>Finding Your Life Purpose</li>
+            <li>Navigating Personal Strengths & Challenges</li>
+            <li>Optimal Timing for Key Decisions</li>
+            <li>Family Dynamics & Ancestral Patterns</li>
+            <li>Health & Wellness Insights</li>
+            <li>Identifying & Releasing Blockages</li>
           </ul>
           <p className={styles.closingStatement}>
             Receive <strong>insightful guidance</strong>, not just generic forecasts.

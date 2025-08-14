@@ -94,7 +94,7 @@ const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gall
 
 const Gallery = () => {
   return (
-    <section id="gallery" className={styles.gallerySection} data-aos="fade-up">
+    <section id="gallery" className={styles.gallerySection} data-aos="fade-down">
       <div className={styles.container}>
         <h2 className={styles.title}>Our Gallery</h2>
         <p className={styles.subtitle}>A Glimpse of Our Event Gallery</p>
@@ -135,6 +135,10 @@ const Gallery = () => {
                 alt={`Event gallery image ${index + 1}`}
                 className={styles.slideImage}
                 loading="lazy" // Native browser lazy loading
+                decoding='async'
+                fetchpriority='low'
+                height={300} // Set a fixed height for the images
+                width={400} // Set a fixed width for the images
               />
             </SwiperSlide>
           ))}
