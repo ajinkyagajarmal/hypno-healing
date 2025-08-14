@@ -5,14 +5,19 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: #FFFAFA; */
   background-color: #f8f3eb;
+  transition: background-image 1s ease-in-out;
+  position: relative; /* Ensure the body can have a pseudo-element */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body.background-visible {
   background-image: url('../src/Assets/10246986.webp');
   opacity: 0.95;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background stationary on scroll */
 }
 
 html {

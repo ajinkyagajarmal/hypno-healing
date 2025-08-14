@@ -157,60 +157,117 @@ const MainPage = () => {
   );
 };
 
+// function App() {
+
+//   useEffect(() => {
+//     AOS.init({
+//       duration: 1000, // You can adjust this
+//       once: true,     // Animation happens only once
+//       offset: 100, 
+//     });
+//   }, []);
+
+//   // 1. Move menuOpen state here from Header.js
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   const [isLoading, setIsLoading] = useState(true);
+
+//   useEffect(() => {
+//     // Wait for 1500 milliseconds (1.5 seconds) then hide the preloader
+//     const timer = setTimeout(() => {
+//       setIsLoading(false);
+//     }, 1500);
+
+//     // Cleanup the timer if the component unmounts
+//     return () => clearTimeout(timer);
+//   }, []); // The empty array ensures this effect runs only once on mount
+
+//   // 5. Use conditional rendering to show the preloader or the app
+//   if (isLoading) {
+//     return <Preloader slogan="Hypno Healing - Where Your inner universe awaits." />;
+//   }
+
+//   return (
+//     <Router>
+//       {/* 2. Conditionally apply a class for the blur effect */}
+//       <div className={`App ${menuOpen ? 'menu-is-open' : ''}`}>
+        
+//         {/* 3. Pass the state and setter function down to the Header */}
+//         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+
+//         <div className="header-spacer"></div> 
+        
+//         <Routes>
+//           {/* <Route path="/" element={<MainPage />} />
+//           <Route path="/home" element={<MainPage />} />
+//           <Route path="/services" element={<MainPage />} />
+//           <Route path="/about-us" element={<MainPage />} />
+//           <Route path="/gallery" element={<MainPage />} />
+//           <Route path="/testimonials" element={<MainPage />} />
+//           <Route path="/contact" element={<MainPage />} /> */}
+//           <Route path="*" element={<MainPage />} />
+//         </Routes>
+        
+//         <Footer />
+//         <WhatsAppChatWidget 
+//           phoneNumber="+91 9890467841"
+//           contactName="Neha Patel"
+//           headerTitle="Chat with us!"
+//         />
+//       </div>
+//     </Router>
+//   );
+// }
+
+// src/App.js
+
 function App() {
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, // You can adjust this
-      once: true,     // Animation happens only once
-      offset: 100, 
-    });
-  }, []);
-
-  // 1. Move menuOpen state here from Header.js
+  // --- State Declarations ---
   const [menuOpen, setMenuOpen] = useState(false);
-
   const [isLoading, setIsLoading] = useState(true);
 
+  // --- Combined useEffect for Initial Setup ---
   useEffect(() => {
-    // Wait for 1500 milliseconds (1.5 seconds) then hide the preloader
-    const timer = setTimeout(() => {
+    // 1. Initialize the animation library
+    AOS.init({
+      duration: 1000,
+      once: true,
+      offset: 100, 
+    },100);
+
+    // 2. Set up the timer for the preloader and background image
+    const preloaderTimer = setTimeout(() => {
+      // Hide the preloader component
       setIsLoading(false);
-    }, 1500);
 
-    // Cleanup the timer if the component unmounts
-    return () => clearTimeout(timer);
-  }, []); // The empty array ensures this effect runs only once on mount
+      // After a short delay, fade in the main background image
+      setTimeout(() => {
+        document.body.classList.add('background-visible');
+      }, 500); // 500ms delay
 
-  // 5. Use conditional rendering to show the preloader or the app
+    }, 1500); // Total preloader duration
+
+    // 3. Cleanup function to clear the timer
+    return () => clearTimeout(preloaderTimer);
+  }, []); // The empty dependency array [] ensures this runs only once after the component mounts
+
+  // --- Conditional Rendering for Preloader ---
   if (isLoading) {
     return <Preloader slogan="Hypno Healing - Where Your inner universe awaits." />;
   }
 
+  // --- Main App Return Statement ---
   return (
     <Router>
-      {/* 2. Conditionally apply a class for the blur effect */}
       <div className={`App ${menuOpen ? 'menu-is-open' : ''}`}>
-        
-        {/* 3. Pass the state and setter function down to the Header */}
         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
         <div className="header-spacer"></div> 
-        
         <Routes>
-          {/* <Route path="/" element={<MainPage />} />
-          <Route path="/home" element={<MainPage />} />
-          <Route path="/services" element={<MainPage />} />
-          <Route path="/about-us" element={<MainPage />} />
-          <Route path="/gallery" element={<MainPage />} />
-          <Route path="/testimonials" element={<MainPage />} />
-          <Route path="/contact" element={<MainPage />} /> */}
           <Route path="*" element={<MainPage />} />
         </Routes>
-        
         <Footer />
         <WhatsAppChatWidget 
-          phoneNumber="+91 9890467841"
+          phoneNumber="+91 YOUR_NUMBER" // Remember to replace this
           contactName="Neha Patel"
           headerTitle="Chat with us!"
         />

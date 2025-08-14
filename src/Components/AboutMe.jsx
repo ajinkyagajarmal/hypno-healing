@@ -20,7 +20,7 @@ const AboutMe = () => {
       <div className={styles.container}>
         {/* Text Content Container */}
         <div className={styles.textContainer} data-aos='fade-right'>
-          <h1 className={styles.heading}>Namaste!</h1>
+          <h1 className={styles.heading} >Namaste!</h1>
           <p className={styles.description}>
           Welcome to HypnoHealing – where healing begins within.
 At the heart of this space is <strong>Mrs. Neha Pattel</strong>, a compassionate healer and certified hypnotherapist with over <strong>{yearsOfExperience} years of experience</strong>. 
