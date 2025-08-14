@@ -71,7 +71,7 @@
 
 import React, { useState, useEffect } from 'react'; // Import useState
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import { useScrollSync } from './hooks/useScrollSync'; 
+import { useScrollSync } from './hooks/useScrollSync'; 
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -87,6 +87,7 @@ import WhatsAppChatWidget from './Components/WhatsAppChatWidget.jsx';
 import AnimatedSection from './Components/AnimatedSection.jsx';
 import Footer from './Components/Footer.jsx';
 import AboutMe from './Components/AboutMe.jsx';
+import AboutUs from './Components/AboutUs.jsx'; 
 import WhyChooseUs from './Components/WhyChooseUs.jsx';
 
 import './App.css';
@@ -102,19 +103,24 @@ const MainPage = () => {
             <AboutMe />
           </AnimatedSection>
         </section>
-        <section id="why-us">
-          <AnimatedSection>
-            <WhyChooseUs />
-          </AnimatedSection>
-        </section>
         <section id="services">
           <AnimatedSection>
             <Services />
           </AnimatedSection>
         </section>
+        <section id="about-us">
+        <AnimatedSection>
+          <AboutUs />
+        </AnimatedSection>
+      </section>
         <section id="gallery">
           <AnimatedSection>
             <Gallery />
+          </AnimatedSection>
+        </section>
+        <section id="why-us">
+          <AnimatedSection>
+            <WhyChooseUs />
           </AnimatedSection>
         </section>
         <section id="testimonials">

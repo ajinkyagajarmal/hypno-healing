@@ -94,7 +94,7 @@ const images = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gall
 
 const Gallery = () => {
   return (
-    <section id="gallery" className={styles.gallerySection} data-aos="fade-right">
+    <section id="gallery" className={styles.gallerySection} data-aos="fade-up">
       <div className={styles.container}>
         <h2 className={styles.title}>Our Gallery</h2>
         <p className={styles.subtitle}>A Glimpse of Our Event Gallery</p>

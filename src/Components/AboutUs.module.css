@@ -1,0 +1,142 @@
+/* src/Components/AboutUs.module.css */
+
+.aboutUsContainer {
+    padding: 5rem 2rem;
+    font-family: 'Raleway', sans-serif;
+    background-color: transparent; /* Clean white background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    /* On desktops, create 3 columns */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; /* The space between the columns */
+}
+
+.title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.1rem;
+    color: #555; /* Slightly darker for better readability */
+    margin-bottom: 3rem;
+    font-weight: 700; /* Normal weight for subtitle */
+}
+
+/* Base styles for all three columns */
+.aboutColumn, .servicesColumn {
+    text-align: left;
+}
+
+/* Specific styling for the two list columns */
+.servicesColumn {
+    background-color: #efe6dd; /* Consistent light grey */
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.columnTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.columnTitle span {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.listIntro {
+    font-size: 1rem;
+    color: #555;
+    font-weight: 700;
+    margin-top: 0.1rem;
+}
+
+.serviceList {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 1.5rem;
+    justify-items: left;
+}
+
+.serviceList li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Custom checkmark-style bullet points */
+/* .serviceList li::before {
+    content: '*';
+    position: absolute;
+    left: 0;
+    color: #28a745; 
+    font-weight: 600;
+} */
+
+.closingStatement {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #666;
+    line-height: 1.6;
+    margin-top: auto; /* Pushes this to the bottom in flexbox */
+}
+
+
+/* --- Responsive Design --- */
+
+/* For Tablets (e.g., screen width 992px and below) */
+@media (max-width: 992px) {
+    .container {
+        /* Stack to a single column */
+        grid-template-columns: 1fr;
+        gap: 3rem; /* Increase gap for vertical stacking */
+    }
+
+    .aboutColumn, .servicesColumn {
+        text-align: center; /* Center text when stacked */
+    }
+
+    .columnTitle {
+        justify-content: center; /* Center the title and icon */
+    }
+}
+
+/* For Mobile Phones (e.g., screen width 768px and below) */
+@media (max-width: 768px) {
+    .aboutUsContainer {
+        padding: 4rem 1rem;
+    }
+
+    .servicesColumn {
+        padding: 1.5rem;
+    }
+
+    .columnTitle {
+        font-size: 1.3rem;
+    }
+}

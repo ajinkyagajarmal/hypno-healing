@@ -28,7 +28,7 @@ With her calming presence and profound understanding of the mind, we’ve helped
 Each session at HypnoHealing with <strong>Mrs. Neha Pattel</strong> is a step toward balance, inner peace, and reconnecting with your true self. <br />
 <strong>Because healing isn’t just possible — it’s already waiting for you.</strong>
           </p>
-          <button className={styles.knowMoreButton}>
+          <button className={styles.knowMoreButton} onClick={() => window.scrollTo({ top: document.getElementById('about-us').offsetTop, behavior: 'smooth' })}>
             Know more
           </button>
         </div>

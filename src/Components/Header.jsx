@@ -56,6 +56,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                             {/* Navigation links remain the same */}
                             <li><ScrollLink activeClass={styles.active} to="home" spy={true} smooth={true} offset={-80} duration={500} onClick={handleMenuClose}>Home</ScrollLink></li>
                             <li><ScrollLink activeClass={styles.active} to="services" spy={true} smooth={true} offset={-80} duration={500} onClick={handleMenuClose}>Services</ScrollLink></li>
+                            <li><ScrollLink activeClass={styles.active} to="about-us" spy={true} smooth={true} offset={-80} duration={500} onClick={handleMenuClose}>About</ScrollLink></li>
                             <li><ScrollLink activeClass={styles.active} to="gallery" spy={true} smooth={true} offset={-80} duration={500} onClick={handleMenuClose}>Gallery</ScrollLink></li>
                             <li><ScrollLink activeClass={styles.active} to="testimonials" spy={true} smooth={true} offset={-80} duration={500} onClick={handleMenuClose}>Testimonials</ScrollLink></li>
                             <li><ScrollLink activeClass={styles.active} to="contact" spy={true} smooth={true} offset={-80} duration={500} onClick={handleMenuClose}>Contact</ScrollLink></li>

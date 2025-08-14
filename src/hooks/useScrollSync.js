@@ -11,6 +11,7 @@ const sectionPaths = {
   '/services': 'services',
   '/gallery': 'gallery',
   '/testimonials': 'testimonials',
+  '/about': 'about',
   '/contact': 'contact',
 };
 

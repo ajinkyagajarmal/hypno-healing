@@ -1,0 +1,69 @@
+// src/Components/AboutUs.jsx
+
+import React from 'react';
+import styles from './AboutUs.module.css';
+
+const AboutUs = () => {
+  return (
+    <div className={styles.aboutUsContainer}>
+        <h2 className={styles.title}>AboutUs</h2>
+        <p className={styles.subtitle}>Our Mission and Vission.</p>
+      <div className={styles.container}>
+        {/* Main Introduction Column */}
+        <div className={styles.aboutColumn}>
+          <h3 className={styles.columnTitle}>
+             About Hypnohealing<span role="img" aria-label="leaf">🌿</span>
+          </h3>
+          <p className={styles.description}>
+            At Hypnohealing, we believe that true healing begins from within. Using scientifically backed hypnotherapy techniques and ancient astrological wisdom, we help you overcome emotional, mental, and behavioral challenges.
+          </p>
+          <p className={styles.description}>
+            Whether you're battling stress, insomnia, addiction, or deep-rooted fear, we create a safe, compassionate space to guide you back to peace and clarity.
+          </p>
+        </div>
+
+        {/* Hypnotherapy Services Column */}
+        <div className={styles.servicesColumn}>
+          <h3 className={styles.columnTitle}>
+            What We Help With<span role="img" aria-label="sparkles">💫</span>
+          </h3>
+          <p className={styles.listIntro}>A calm mind is the first step to peace. Let us help you find relief from:</p>
+          <ul className={styles.serviceList}>
+            <li>Fear of Success / Failure</li>
+            <li>OCD & Obsessive Thoughts</li>
+            <li>Alcohol / Mobile / Internet Addiction</li>
+            <li>Acidity / Psychosomatic Illness</li>
+            <li>Stress, Anxiety & Panic Attacks</li>
+            <li>Depression & Suicidal Thoughts</li>
+            <li>Exam Fear / Performance Pressure</li>
+            <li>Lack of Focus & Poor Concentration</li>
+            <li>Insomnia / Sleeplessness</li>
+            <li>Anger Management</li>
+          </ul>
+          <p className={styles.closingStatement}>
+            <strong>Therapy is personalized, gentle, and non-invasive</strong> — designed to address the root cause, not just the symptoms.
+          </p>
+        </div>
+
+        {/* Astrology Services Column */}
+        <div className={styles.servicesColumn}>
+          <h3 className={styles.columnTitle}>
+            Astrology Consultations <span role="img" aria-label="crystal ball">🔮</span>
+          </h3>
+          <p className={styles.listIntro}>Sometimes, clarity comes from the cosmos. Ask questions related to:</p>
+          <ul className={styles.serviceList}>
+            <li>Career, Marriage, Relationships</li>
+            <li>Business Growth</li>
+            <li>Education, Travel</li>
+            <li>Mental Peace & Energy Balance</li>
+          </ul>
+          <p className={styles.closingStatement}>
+            Receive <strong>insightful guidance</strong>, not just generic forecasts.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutUs;
