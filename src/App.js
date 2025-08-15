@@ -75,7 +75,8 @@ import { useScrollSync } from './hooks/useScrollSync';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-  import './App.css';
+import './index.css';
+import './App.css';
 // --- Your Components ---
 import Header from './Components/Header.jsx';
 import Footer from './Components/Footer.jsx';

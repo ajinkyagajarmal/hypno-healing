@@ -1,0 +1,492 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Raleway','Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f3eb;
+  transition: background-image 1s ease-in-out;
+  position: relative; /* Ensure the body can have a pseudo-element */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+body.background-visible {
+  background-image: url('../src/Assets/10246986.webp');
+  opacity: 0.95;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background stationary on scroll */
+}
+
+.body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.header-spacer {
+  height: 145px; /* Adjust this value! See note below. */
+}
+
+@media (max-width: 768px) {
+  .header-spacer {
+    height: 100px;
+  }
+}
+
+/* --- Root Variables for Colors --- */
+:root {
+    --primary-font: var('Raleway', sans-serif);
+    --color-bg-top: #c72030; /* Light background for top bar */
+    --color-gold: #D32F2F;
+    --color-text-dark: #333;
+    --color-text-light: #ffffff;
+    --color-white: #f8f3eb;
+}
+
+/* ... All of your desktop styles from .header to .hamburger remain exactly the same ... */
+.header {
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: var(--color-white);
+    position: fixed;
+    top: 0;   
+    left: 0; 
+    z-index: 999; 
+}
+
+.container {
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.topBar {
+    background-color: var(--color-bg-top);
+    padding: 10px 0;
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    transition: display 0.3s ease;
+}
+
+.topBar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.socialIcons, .contactInfo {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.socialIcons a, .contactInfo a {
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-text-light);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.socialIcons a:hover, .contactInfo a:hover {
+    color: var(--color-text-dark);
+}
+
+.mainNav {
+    padding: 0.4rem 0;
+}
+
+.logo img {
+    max-height: 64px;
+    height: auto;
+    transition: max-height 0.3s ease;
+}
+
+.navLinks ul {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navLinks a {
+    cursor: pointer;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    transition: color 0.3s ease;
+}
+
+.navLinks a:hover {
+    color: var(--color-gold);
+}
+
+.navLinks a.active {}
+
+.navLinks a.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: 2px;
+}
+
+.hamburger {
+    /* display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--color-text-dark);
+    cursor: pointer;
+    z-index: 1001; */
+    padding: 15px; /* Increase tappable area */
+  display: none;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 1000; /* Ensure it's above other nav elements if needed */
+  transition: transform 0.3s ease; /* Optional: slight scale effect on tap */
+}
+
+.hamburger {
+  -webkit-tap-highlight-color: transparent; /* For webkit browsers (Chrome, Safari) */
+  -tap-highlight-color: transparent; /* Standard property */
+}
+
+.hamburgerLine {
+  display: block;
+  width: 30px; /* Width of the hamburger lines */
+  height: 3px;  /* Thickness of the lines */
+  background-color: #333; /* Color of the lines, adjust as needed */
+  margin: 6px 0; /* Spacing between the lines */
+  border-radius: 3px;
+  transition: all 0.4s ease-in-out;
+}
+
+.hamburgerActive .hamburgerLine:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+/* Fade out the middle line completely */
+.hamburgerActive .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate the bottom line up */
+.hamburgerActive .hamburgerLine:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobileExtras {
+    display: none;
+}
+
+
+/* --- Responsive Design --- */
+
+@media (max-width: 1024px) {
+    .container{
+        justify-content: space-around;
+    }
+    .topBar {
+        justify-content: space-around;
+    }
+    
+}
+
+
+@media (max-width: 992px) {
+    .container{
+        justify-content: space-around;
+    }
+    .topBar {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Keep the slide-in menu panel as you have it */
+    .navLinks {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding-top: 6rem;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        overflow-y: auto;
+        transition: left 0.5s ease;
+    }
+
+    .navLinks.navActive {
+        left: 0;
+    }
+
+    .navLinks ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0;
+    }
+
+    .navLinks li {
+        width: 100%;
+    }
+
+    .navLinks a {
+        padding: 1rem 1.5rem;
+        width: 100%;
+    }
+
+    .navLinks a.active::before {
+       display: none;
+    }
+
+    .navLinks a.active {
+        background-color: var(--color-bg-top); /* This gives the red background */
+        color: var(--color-text-light); /* Makes text white on red background */
+    }
+
+    .logo img {
+        max-height: 64px;
+    }
+    
+    /* --- UPDATED STYLES FOR MOBILE INFO SECTION --- */
+    .mobileExtras {
+        display: block;
+        padding: 2rem 1.5rem; /* Consistent padding */
+        /* margin-top: 1rem; */
+        flex-direction: column;
+        border-top: 1px solid #eee; /* The line separator */
+        width: 100%;
+    }
+
+    /* 1. Style the Social Icons */
+    .mobileSocial {
+        display: flex;
+        justify-content: left; /* Align to the left */
+        gap: 0.1rem; /* Space between icons */
+        margin-top: 1.4rem; /* Space below icons, before contact info */
+        font-size: 1.5rem;
+    }
+
+    .mobileSocial a {
+        color: var(--color-text-dark); /* Black icons */
+        padding: 0;
+    }
+
+    /* 2. Style the Contact Info */
+    .mobileContact {
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column; /* Stack phone and email vertically */
+        gap: 1rem; /* Space between phone and email */
+        align-items: flex-start; /* Align them to the left */
+    }
+    
+    .mobileContact a {
+        color: var(--color-text-dark); /* << CHANGED: Make text visible on white background */
+        font-size: 0.9rem;
+        padding: 0;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    /* --- END OF UPDATES --- */
+}
+
+@media (max-width: 576px) {
+    .logo img {
+        max-height: 56px;
+    }
+}
+
+/* This specifically targets the social icons inside the slide-out mobile menu */
+.mobileSocial a::before,
+.mobileSocial a::after {
+  /* This forcefully removes any content from pseudo-elements that might be creating the slashes */
+  content: none !important;
+  display: none !important;
+}
+
+/* You can optionally add some margin for better spacing if needed */
+.mobileSocial a {
+  margin: 0 0px; /* Adjust as needed */
+}
+
+
+/* General container for the whole section */
+.aboutSection {
+    font-family: 'Roboto', sans-serif;
+    padding: 4rem 2rem; /* Vertical and horizontal padding */
+    color: #333;
+}
+
+
+/* Optional: Add an overlay for better text contrast */
+.aboutSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: rgba(255, 255, 255, 0.802); */
+    z-index: 0;
+}
+
+/* Main flex container */
+.container {
+    position: relative;
+    z-index: 1; /* Ensure text is above the overlay */
+    display: flex;
+    align-items: flex-start; /* Vertically align content */
+    justify-content:center;
+    gap: 3rem; /* Space between text and image */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+}
+
+/* Left side: Text content */
+.textContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 550px;
+}
+
+/* Right side: Image content */
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImage {
+    margin-top: -2rem;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px; /* Optional: slightly rounded corners */
+}
+
+/* --- Typography and Elements --- */
+
+.heading {
+    margin-top: 0;
+    margin-bottom: 14px;
+    font-family: 'Raleway', sans-serif; /* Serif font for the heading */
+    font-size: 3rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+.description {
+    text-align: left;
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    color: #555;
+    font-family: 'Raleway', sans-serif; /* Sans-serif font for the description */
+}
+
+.knowMoreButton {
+    background-color: #c72030; /* Mustard yellow from the image */
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: max-content; /* Button width adjusts to its content */
+}
+
+.knowMoreButton:hover {
+    background-color: #333333; /* A slightly darker shade for hover */
+    transform: translateY(-2px);
+}
+
+
+/* --- Responsive Design --- */
+
+/* For Tablets and smaller laptops */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column; /* Stack image and text vertically */
+        gap: 2rem;
+    }
+
+    .textContainer {
+        order: 2; /* Make text appear below the image on small screens */
+        text-align: center; /* Center text for a better look when stacked */
+        align-items: center; /* Center the button */
+    }
+
+    .imageContainer {
+        order: 1; /* Make image appear on top */
+        max-width: 500px; /* Limit image width on tablets */
+    }
+    
+    .heading {
+        font-size: 2.8rem;
+    }
+}
+
+/* For Mobile Phones */
+@media (max-width: 576px) {
+    .aboutSection {
+        padding: 1.8rem 1rem; /* Reduce padding on small screens */
+    }
+
+    .heading {
+        font-size: 2.2rem;
+    }
+
+    .description {
+        font-size: 0.94rem;
+    }
+}
