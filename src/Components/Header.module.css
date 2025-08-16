@@ -201,6 +201,7 @@
         width: 80%;
         max-width: 320px;
         height: 100vh;
+        height: 100dvh;
         background-color: var(--color-white);
         flex-direction: column;
         justify-content: flex-start;

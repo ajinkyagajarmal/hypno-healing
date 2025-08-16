@@ -9,6 +9,7 @@ body {
   transition: background-image 1s ease-in-out;
   position: relative; /* Ensure the body can have a pseudo-element */
   overflow-x: hidden; /* Prevent horizontal scroll */
+  -webkit-overflow-scrolling: touch;
 }
 
 body.background-visible {
@@ -22,6 +23,7 @@ body.background-visible {
 
 html {
   scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 .body::before {

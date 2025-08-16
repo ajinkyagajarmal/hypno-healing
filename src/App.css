@@ -13,6 +13,8 @@ body, html {
 .App {
   text-align: center;
   overflow-x: hidden;
+  width: 100%;
+  position: relative; 
 }
 
 .App-logo {
