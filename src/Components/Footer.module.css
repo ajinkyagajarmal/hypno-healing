@@ -1,46 +1,157 @@
-/* --- Footer Styling --- */
+/* src/Components/Footer.module.css */
+
 .footer {
-    background-color: #333333; /* A dark, modern grey */
-    color: #ffffff; /* A soft, light grey for the text */
-    padding: 1.5rem 1rem; /* Vertical and horizontal padding */
-    text-align: left;
-    font-family: 'Raleway', sans-serif; /* Use fonts from your project */
-    font-size: 16px;
+    background-color: #333; /* A dark, professional background */
+    color: #f8f3eb; /* Your warm off-white text color */
+    padding: 4rem 2rem 1.5rem 2rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.footerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align to the top */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footerLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    gap: 5.75rem;
+}
+
+.footerLogo img {
+    max-height: 64px; /* Adjust logo size as needed */
     width: auto;
 }
 
-.footerContainer {
-    max-width: 1200px;
-    margin: 0 auto; /* Center the container */
+.footerSocial {
+    display: flex;
+    gap: 1rem;
 }
 
-.copyrightText {
-    margin: 0; /* Remove default paragraph margin */
-    font-size: 1rem;
-    font-weight: 400;
+.footerSocial a {
+    color: #f8f3eb;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Optional: Add styling for any links you might add later */
-.copyrightText a {
-    color: #ffffff;
+.footerSocial a:hover {
+    color: #c72030; /* Your brand's red accent color */
+    transform: translateY(-3px);
+}
+
+.footerLinks {
+    display: flex;
+    flex-wrap: wrap; /* Allow links to wrap */
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.footerLinks a {
+    color: #ddd;
     text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
     transition: color 0.3s ease;
 }
 
-.copyrightText a:hover {
-    color: #ef9797; /* Using the gold color from the header for consistency */
+.footerLinks a:hover {
+    color: #ffffff;
 }
 
+.footerBottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444; /* A subtle separator line */
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.footerCta {
+    max-width: 00px; /* Constrain the width for better readability */
+    margin: 3rem auto; /* Center the block and add space above/below */
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.15); /* A slightly lighter shade of the footer bg */
+    border-radius: 12px;
+}
+
+.ctaTitle {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.ctaSubtitle {
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.ctaButton {
+    background-color: #c72030; /* Your brand's red accent color */
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.ctaButton:hover {
+    background-color: #a11a26; /* A darker shade for hover */
+    transform: translateY(-2px);
+}
 
 /* --- Responsive Design --- */
-/* For very small mobile screens */
-@media (max-width: 576px) {
-    .copyrightText {
-        font-size: 0.8rem; 
-        text-align: center; /* Center text on small screens */
+
+@media (max-width: 768px) {
+    .footerContent {
+        flex-direction: column; /* Stack left and right sections */
+        align-items: center;   /* Center everything */
+        text-align: center;
     }
-    
-    .footer {
-        padding: 1rem;
+
+    .footerLeft {
+        align-items: center;
+    }
+
+    .footerLinks {
+        justify-content: center; /* Center the nav links */
+        gap: 1rem 1.5rem; /* Adjust row and column gap */
+    }
+
+    .footerCta {
+        margin: 2rem auto;
+        padding: 1.5rem;
+    }
+
+    .ctaTitle {
+        font-size: 1.5rem;
+    }
+
+    .ctaSubtitle {
+        font-size: 1rem;
     }
 }
