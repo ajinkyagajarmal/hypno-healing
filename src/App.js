@@ -118,23 +118,23 @@ const MainPage = () => {
       <main>
         <section id="home">
           <AnimatedSection>
-            {/* <AboutMe /> */}
+            <AboutMe />
           </AnimatedSection>
         </section>
         <Suspense fallback={<SectionLoader />}>
         <section id="services">
           <AnimatedSection>
-            {/* <Services /> */}
+            <Services />
           </AnimatedSection>
         </section>
         <section id="about-us">
         <AnimatedSection>
-          {/* <AboutUs /> */}
+          <AboutUs />
         </AnimatedSection>
       </section>
         <section id="gallery">
           <AnimatedSection>
-            {/* <Gallery /> */}
+            <Gallery />
           </AnimatedSection>
         </section>
         <section id="why-us">
@@ -144,12 +144,12 @@ const MainPage = () => {
         </section>
         <section id="testimonials">
           <AnimatedSection>
-            {/* <Testimonials /> */}
+            <Testimonials />
           </AnimatedSection>
         </section>
         <section id="contact">
           <AnimatedSection>
-            {/* <ContactMap /> */}
+            <ContactMap />
           </AnimatedSection>
         </section>
         </Suspense>
