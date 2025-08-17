@@ -26,7 +26,7 @@ const Footer = () => {
         <div className={styles.footerLinks}>
           {/* --- USE STANDARD <a> tags with href --- */}
           {/* The browser will handle the scrolling. */}
-          <a href="#home">Home</a>
+          <a href="#">Home</a>
           <a href="#about-us">About</a>
           <a href="#services">Services</a>
           <a href="#gallery">Gallery</a>
