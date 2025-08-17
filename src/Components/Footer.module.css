@@ -68,6 +68,10 @@
     font-weight: 500;
     cursor: pointer;
     transition: color 0.3s ease;
+    /* --- ADD THESE THREE LINES TO FIX THE BLUE TAP --- */
+    -webkit-tap-highlight-color: transparent; /* For iOS/Safari */
+    -tap-highlight-color: transparent; /* Standard property */
+    outline: none; /* Removes the focus outline after the tap */
 }
 
 .footerLinks a:hover {
