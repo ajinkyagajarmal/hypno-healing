@@ -6,7 +6,7 @@ import styles from './Header.module.css';
 
 // --- Icon Imports ---
 // Make sure you have all the icons you need
-import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
+import { FaFacebook, FaInstagram, FaWhatsapp, FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 
 // --- Asset Imports (for desktop top bar) ---
 import facebook from '../Assets/white-facebook.webp';
@@ -75,7 +75,7 @@ const Header = ({ menuOpen, setMenuOpen }) => {
                                 <a href="mailto:hypnohealling1@gmail.com"><FaEnvelope /><span>hypnohealling1@gmail.com</span></a>
                             </div>
                             <div className={styles.mobileSocial}>
-                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebookF /></a>
+                                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FaFacebook /></a>
                                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
                                 <a href="https://wa.me/919764953382" target="_blank" rel="noopener noreferrer" aria-label="Whatsapp"><FaWhatsapp /></a>
                             </div>

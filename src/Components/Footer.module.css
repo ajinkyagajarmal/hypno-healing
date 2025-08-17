@@ -5,6 +5,8 @@
     color: #f8f3eb; /* Your warm off-white text color */
     padding: 4rem 2rem 1.5rem 2rem;
     font-family: 'Raleway', sans-serif;
+    position: relative;
+    z-index: 10; /* Ensure footer is above other content */
 }
 
 .footerContent {
@@ -52,6 +54,7 @@
 }
 
 .footerLinks {
+    cursor: pointer;
     display: flex;
     flex-wrap: wrap; /* Allow links to wrap */
     gap: 1.5rem;
@@ -68,7 +71,8 @@
 }
 
 .footerLinks a:hover {
-    color: #ffffff;
+    color: #c72030; /* Your brand's red accent color */
+    transform: translateY(-3px);
 }
 
 .footerBottom {

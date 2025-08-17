@@ -260,7 +260,7 @@ function App() {
   // --- Main App Return Statement ---
   return (
     <Router>
-      <div className={`App ${menuOpen ? 'menu-is-open' : ''}`}>
+      <div id="app-container" className={`App ${menuOpen ? 'menu-is-open' : ''}`}>
         <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <div className="header-spacer"></div> 
         <Routes>

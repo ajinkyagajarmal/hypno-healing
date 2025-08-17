@@ -6,7 +6,7 @@ import styles from './AboutUs.module.css';
 const AboutUs = () => {
   return (
     <div className={styles.aboutUsContainer}>
-        <h2 className={styles.title}>AboutUs</h2>
+        <h2 className={styles.title}>About</h2>
         <p className={styles.subtitle}>Helping you rewrite the stories your subconscious mind tells.</p>
       <div className={styles.container}>
         {/* Main Introduction Column */}
