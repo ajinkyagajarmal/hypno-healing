@@ -23,7 +23,7 @@ const ContactCard = () => {
           <h3 className={styles.cardTitle}>Contact:</h3>
           <p className={styles.cardText}>
             <span className={styles.contactLabel1}>Phone:</span>
-            <a href="tel:+919764953382" className={styles.contactLink}>+91 9764953382</a>
+            <a href="tel:+918806024494" className={styles.contactLink}>+91 8806024494</a>
           </p>
           <p className={styles.cardText}>
             <span className={styles.contactLabel1}>Email:</span>

@@ -31,8 +31,15 @@
     font-weight: 700; /* Normal weight for subtitle */
 }
 
+.aboutColumn {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem;
+    border-radius: 12px;
+}
+
 /* Base styles for all three columns */
-.aboutColumn, .servicesColumn {
+.servicesColumn {
     text-align: left;
 }
 

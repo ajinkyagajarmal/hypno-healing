@@ -22,9 +22,9 @@ const AboutMe = () => {
         <div className={styles.textContainer} data-aos='fade-right'>
           <h1 className={styles.heading} >Namaste!</h1>
           <p className={styles.description}>
-          Welcome to HypnoHealing – where healing begins within.
+          Welcome to HypnoHealling – where healing begins within.
 At the heart of this space is <strong>Mrs. Neha Pattel</strong>, a compassionate healer and certified hypnotherapist with over <strong>{yearsOfExperience} years of experience</strong>. 
-With her calming presence and profound understanding of the mind, we’ve helped <strong>more than 500 individuals</strong> overcome anxiety, trauma, addiction, fear, and emotional distress.
+With her calming presence and profound understanding of the mind, we’ve helped <strong>more than 1000 individuals</strong> overcome anxiety, trauma, addiction, fear, and emotional distress.
 Each session at HypnoHealing with <strong>Mrs. Neha Pattel</strong> is a step toward balance, inner peace, and reconnecting with your true self. <br />
 <strong>Because healing isn’t just possible — it’s already waiting for you.</strong>
           </p>
