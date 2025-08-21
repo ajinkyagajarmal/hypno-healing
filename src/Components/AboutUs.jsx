@@ -8,7 +8,7 @@ const AboutUs = () => {
     <div className={styles.aboutUsContainer}>
         <h2 className={styles.title}>About</h2>
         <p className={styles.subtitle}>Helping you rewrite the stories your subconscious mind tells.</p>
-        <div className={styles.aboutColumn} data-aos='fade-right'>
+        <div className={styles.aboutColumn} data-aos='fade-down'>
           <h3 className={styles.columnTitle}>
              About Hypnohealing<span role="img" aria-label="leaf">🌿</span>
           </h3>
@@ -34,7 +34,7 @@ const AboutUs = () => {
         </div> */}
 
         {/* Hypnotherapy Services Column */}
-        <div className={styles.servicesColumn} data-aos='fade-up'>
+        <div className={styles.servicesColumn} data-aos='fade-left'>
           <h3 className={styles.columnTitle}>
             What We Help With<span role="img" aria-label="sparkles">💫</span>
           </h3>
@@ -57,7 +57,7 @@ const AboutUs = () => {
         </div>
 
         {/* Astrology Services Column */}
-        <div className={styles.servicesColumn} data-aos='fade-left'>
+        <div className={styles.servicesColumn} data-aos='fade-up'>
           <h3 className={styles.columnTitle}>
             Astrology Consultations <span role="img" aria-label="crystal ball">🔮</span>
           </h3>
@@ -80,7 +80,7 @@ const AboutUs = () => {
           </p>
         </div>
 
-        <div className={styles.servicesColumn} data-aos='fade-up'>
+        <div className={styles.servicesColumn} data-aos='fade-right'>
           <h3 className={styles.columnTitle}>
             Mental Health Center<span role="img" aria-label="sparkles">🌈</span>
           </h3>
